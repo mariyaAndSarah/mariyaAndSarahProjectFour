@@ -10,18 +10,28 @@ myElephants.getElephants = () => {
         data: {
             reqUrl: 'http://elephant-api.herokuapp.com/elephants',
         }
-    }).then(result => {
-        myElephants.fileterEl(result);
-    })
-}
+    }).then((result) => {
+        myElephants.displayElephants(result);
+    });
+};
 
-myElephants.fileterEl = (selection) => {
-    console.log(selection);
+myElephants.displayElephants = (data) => {
+    const filteredArray = data.filter((filterElephant) => {
+        const name = filterElephant.name;
+        return name;
+    });
+    console.log(filteredArray);
+};
 
-}
+
+
+
+
+
+
 
 // syntax for getting the key from the array object
-array[i].key
+// array[i].key
 
 // Get the location 
     // user selects species type: Asian or African
