@@ -16,7 +16,6 @@ myElephants.getElephants = () => {
 }
 
 
-
 // Create an init function for the app
 myElephants.init = () => {
     myElephants.getElephants();
