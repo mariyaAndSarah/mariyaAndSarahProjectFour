@@ -8,8 +8,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HEY WASSUP</h1>
-    <p>hi again</p>
+    <main id="startQuiz" class="">
+        <section class="">
+            <!-- A short introduction to the quiz for the user -->
+            <p></p>
+            <!-- The questions for the quiz start here -->
+            <div class="" id="">
+                <form action="#" method="#" class="myForm" name="myForm">
+                    <fieldset>
+                        <!-- First question -->
+                        <h2>What species of elephant would you like to see?</h2>
+                        <div class="">
+                            <!-- Option one -->
+                            <input type="radio" name="species" value="asian" id="asian" autocomplete="off" class="species">
+                            <label for="asian">Asian</label>
+                            <!-- Option two -->
+                            <input type="radio" name="species" value="african" id="asian" autocomplete="off" class="species">
+                            <label for="african">African</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <!-- Second question -->
+                        <h2>Do you want to see boy elephants or girl elephants</h2>
+                        <div class="">
+                            <!-- Option one -->
+                            <input type="radio" name="sex" value="girl" id="girl" autocomplete="off" class="sex">
+                            <label for="girl">Girl</label>
+                            <!-- Option two -->
+                            <input type="radio" name="sex" value="boy" id="boy" autocomplete="off" class="sex">
+                            <label for="boy">Boy</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <!-- Third question -->
+                        <h2>Do you want to see live elephants?</h2>
+                        <div class="cuteButton">
+                            <!-- Option one -->
+                            <input type="radio" name="death" value="live" id="live" autocomplete="off" class="death">
+                            <label for="live">Yes</label>
+                            <!-- Option two -->
+                            <input type="radio" name="death" value="dead" id="dead" autocomplete="off" class="death">
+                            <label for="dead">No, I'd prefer to visit an elephant graveyard. </label>
+                        </div>
+                    </fieldset>
+                    <!-- A horizontal line contained by a wrapper to seperate the quiz questions from the submit and reset buttons -->
+                    <div class="wrapper">
+                        <hr>
+                    </div>
+                    <!-- The submit and reset buttons start here -->
+                    <div class="buttons wrapper">
+                        <div>
+                            <input class="submit" type="submit" value="Start my Safari!" id="submit" />
+                        </div>
+                        <div>
+                            <input class="reset" type="reset" value="This Safari Sucks, I Want a Refund.">
+                        </div>
+                    </div>
+                </form>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="scripts.js"></script>
 </body>
