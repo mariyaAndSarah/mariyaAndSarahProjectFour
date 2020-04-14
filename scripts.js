@@ -1,16 +1,21 @@
 // Create a namespace for the app
 const myElephants = {};
 
-// Create function that will make ajax request to be called inside of the init function
+// Create function that will make ajax request to be called inside of the 
 myElephants.getElephants = () => {
     $.ajax({
-        url: `https://elephant-api.herokuapp.com/elephants/random`,
+        url: 'http://proxy.hackeryou.com',
+        dataType: 'json',
         method: 'GET',
-        dataType: 'jsonp'
+        data: {
+            reqUrl: 'http://elephant-api.herokuapp.com/elephants',
+        }
     }).then(result => {
         console.log(result);
     })
 }
+
+
 
 // Create an init function for the app
 myElephants.init = () => {
