@@ -21,7 +21,6 @@ myElephants.displayElephants = (data) => {
         const name = filterElephant.name;
         return name;
     });
-    console.log(myElephants.filteredArray)
 };
 
 
@@ -29,24 +28,34 @@ myElephants.displayElephants = (data) => {
 myElephants.clickEventSubmit = () => {
     $('form').on('submit', function(e) {
         e.preventDefault();
+
       // declare variables to store user input 
         const species = $('input[class="species"]:checked').val();
         const sex = $('input[class="sex"]:checked').val();
-        // const death = $('input[class="death"]:checked').val();
-        console.log(species, sex)
         
-        let userSelectionValue;
-        // const selectionArray = [];
+        // For loop to go through and match the user input for species and sex
         for (let i = 0; i < myElephants.filteredArray.length; i++) {
             const store = myElephants.filteredArray[i].species;
             const gender = myElephants.filteredArray[i].sex;
-            console.log(gender)
-            if (store.includes(species) && gender == sex) {
-                console.log(myElephants.filteredArray[i])
+            
+            if (store.includes(species) && gender.toLowerCase() === sex) {
+
+                const elephant = myElephants.filteredArray[i];
+                
+                myElephants.filteredArray.forEach(function(elephant){
+                    const elephantHtml = `
+                    <img src="${elephant.image}">
+                    `
+                    $('.results').append(elephantHtml);
+                });
+                console.log(elephant.image);
+
+
+                
+
+                // console.log(myElephants.filteredArray[i])
             }
-            else {
-                console.log('no match')
-            }
+           
         }
     } )
 }
