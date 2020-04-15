@@ -15,19 +15,41 @@ myElephants.getElephants = () => {
     });
 };
 
+
 myElephants.displayElephants = (data) => {
-    const filteredArray = data.filter((filterElephant) => {
+    myElephants.filteredArray = data.filter((filterElephant) => {
         const name = filterElephant.name;
         return name;
     });
-    console.log(filteredArray);
+    console.log(myElephants.filteredArray)
 };
 
 
-
-
-
-
+// Gather user input values and filter API objects based on this
+myElephants.clickEventSubmit = () => {
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+      // declare variables to store user input 
+        const species = $('input[class="species"]:checked').val();
+        const sex = $('input[class="sex"]:checked').val();
+        // const death = $('input[class="death"]:checked').val();
+        console.log(species, sex)
+        
+        let userSelectionValue;
+        // const selectionArray = [];
+        for (let i = 0; i < myElephants.filteredArray.length; i++) {
+            const store = myElephants.filteredArray[i].species;
+            const gender = myElephants.filteredArray[i].sex;
+            console.log(gender)
+            if (store.includes(species) && gender == sex) {
+                console.log(myElephants.filteredArray[i])
+            }
+            else {
+                console.log('no match')
+            }
+        }
+    } )
+}
 
 
 // syntax for getting the key from the array object
@@ -57,6 +79,8 @@ myElephants.displayElephants = (data) => {
 // Create an init function for the app
 myElephants.init = () => {
     myElephants.getElephants();
+    
+    myElephants.clickEventSubmit();
 };
 
 
