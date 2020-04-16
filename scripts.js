@@ -17,81 +17,73 @@ myElephants.getElephants = () => {
 
 
 myElephants.displayElephants = (data) => {
-    myElephants.filteredArray = data.filter((filterElephant) => {
-        const name = filterElephant.name;
+    myElephants.filteredArrayOne = data.filter((filterName) => {
+        const name = filterName.name;
         return name;
-    });
-};
 
+    });
+    myElephants.filteredArray = myElephants.filteredArrayOne.filter((filterImage) => {
+        const url = filterImage.image;
+        if (url.includes('missing')){
+
+        } else {
+            return url;
+        }
+    })
+};
 
 // Gather user input values and filter API objects based on this
 myElephants.clickEventSubmit = () => {
     $('form').on('submit', function(e) {
         e.preventDefault();
+        $('.results').empty();
 
       // declare variables to store user input 
         const species = $('input[class="species"]:checked').val();
         const sex = $('input[class="sex"]:checked').val();
-        
+        const death = $('input[class="death"]:checked').val();
+
         // For loop to go through and match the user input for species and sex
         for (let i = 0; i < myElephants.filteredArray.length; i++) {
             const store = myElephants.filteredArray[i].species;
             const gender = myElephants.filteredArray[i].sex;
-            
-            if (store.includes(species) && gender.toLowerCase() === sex) {
+            const dead = myElephants.filteredArray[i].dod;
+            console.log(death)
 
-                const elephant = myElephants.filteredArray[i];
-                
-                myElephants.filteredArray.forEach(function(elephant){
-                    const elephantHtml = `
-                    <img src="${elephant.image}">
-                    `
-                    $('.results').append(elephantHtml);
-                });
-                console.log(elephant.image);
-
+            if (store.includes(species) && gender.toLowerCase() === sex && death === "-") {
 
                 
 
-                // console.log(myElephants.filteredArray[i])
+                const elephantName = myElephants.filteredArray[i].name;
+                const elephantImg = myElephants.filteredArray[i].image;
+                const wikiLink = myElephants.filteredArray[i].wikilink
+                
+                const elephantHtml = 
+                `
+                <div class="elephants">
+                    <h2>${elephantName}</h2>
+                    <img src="${elephantImg}" alt="${elephantName}">
+                    <a href="${wikiLink}">Learn More!</a>
+                </div>
+                `
+                $('.results').append(elephantHtml);
             }
-           
         }
-    } )
+    })
 }
 
-
-// syntax for getting the key from the array object
-// array[i].key
-
-// Get the location 
-    // user selects species type: Asian or African
-    // declare selectSpecies variable to store the user input 
-
-// Get the sex
-    // user selects elephant type: Male or Female
-    // declare selectSex variable to store the user input 
-
-// Get by dead or alive
-    // user selects if they want to see an elephant that is still living or dead
-    // declare selectStatus variable to store the user input
-    // if selectStatus variable.length = > 2 && < = 5, elephant is dead
-    // else, elephant is alive
-
-// Filter the results
-    // for loop going through the array to see whether the user selected Asian or African
-    // check if user input === API object data (array.Species)
-
-// Display name, affiliation, image, note
-
+myElephants.clickEventReset = () => {
+    $('.reset').click(function () {
+        $('.results').empty();
+    });
+}
 
 // Create an init function for the app
 myElephants.init = () => {
     myElephants.getElephants();
-    
     myElephants.clickEventSubmit();
+    myElephants.clickEventReset();
 };
-
 
 // Create a document ready function for the app 
 $(function(){
