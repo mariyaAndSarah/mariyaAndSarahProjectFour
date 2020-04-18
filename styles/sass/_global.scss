@@ -3,13 +3,12 @@ html {
 }
 
 body {
-    background-color: mediumseagreen;
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $bodyFont;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 
@@ -30,7 +29,7 @@ fieldset {
 
 a {
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 7px 20px;
     transition: 0.3s;
 }
 

@@ -1,39 +1,43 @@
 header {
     height: 100vh;
-    justify-content: center;
-    background-color: white;
-    color: black;
+    background-image: url(../assets/mylon-ollila-j4ocWYAP_cs-unsplash.jpg);
+    background-size: 100%;
+    color: $darkColor;
+    background-position-y: -131px;
+    background-repeat: no-repeat;
     // The styling for the start link in the header. 
     a {
-        background-color: black;
-        color: white;
+        background-color: #4a6140;
+        color: $lightColor;
         border: 1px solid transparent;
-        font-size: 2.2rem;
+        font-size: 2rem;
         // The styling for the hover and focus states for this link. 
         &:hover,
         &:focus {
-            background-color: red;
-            color: white;
+            background-color: #35492d;
+            color: $lightColor;
         }
     }
 }
 
 h1 {
-    font-family: $bodyFont;
-    font-weight: 700;
+    font-family: 'Montserrat';
+    font-weight: 400;
     font-size: 5rem;
     text-transform: uppercase;
-
+    margin-top: 40px;
     width: 70%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    letter-spacing: 1.3px;
 }
 
 p {
     margin: 0 auto;
 }
 
-header p:nth-child(3) {
-    padding-bottom: 30px;
+.byline > p:nth-child(2) {
+    padding-bottom: 45px;
 }
 
