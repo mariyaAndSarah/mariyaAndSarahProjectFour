@@ -12,7 +12,8 @@
     padding: 15px 20px;
     transition: 0.3s;
     background-color: black;
-    font-family: auto;
+    font-family: $bodyFont;
+    font-weight: 300;
     &:hover,
     &:focus {
         background-color: red;

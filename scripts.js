@@ -98,7 +98,7 @@ myElephants.clickEventSubmit = () => {
 myElephants.clickEventReset = () => {
     $('.reset').click(function () {
         $('.results').empty();
-        myElephants.scroll('.firstQuestion');
+        myElephants.scroll('body');
     });
 }
 

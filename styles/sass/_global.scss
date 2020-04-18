@@ -7,7 +7,11 @@ body {
     color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: $bodyFont;
+    font-weight: 300;
+    font-size: 2rem;
 }
+
 
 .wrapper {
     width: 90%;
@@ -34,6 +38,7 @@ a {
 
 .results {
     display: flex;
+    // flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
