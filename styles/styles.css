@@ -244,6 +244,9 @@ body {
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
 }
 
 .wrapper {
@@ -312,7 +315,7 @@ header a {
   background-color: black;
   color: white;
   border: 1px solid transparent;
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 
 header a:hover, header a:focus {
@@ -321,19 +324,25 @@ header a:hover, header a:focus {
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 100px;
-  width: 60%;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  text-transform: uppercase;
+  width: 70%;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 p {
-  font-size: 30px;
   margin: 0 auto;
+}
+
+header p:nth-child(3) {
   padding-bottom: 30px;
 }
 
-section {
+section.firstQuestion,
+section.secondQuestion {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,12 +359,14 @@ section {
           align-items: center;
 }
 
-section a {
+section.firstQuestion a,
+section.secondQuestion a {
   background: black;
   color: white;
 }
 
-section a:hover {
+section.firstQuestion a:hover,
+section.secondQuestion a:hover {
   background: red;
 }
 
@@ -374,7 +385,7 @@ fieldset {
   background-color: transparent;
   color: black;
   border: 1px solid black;
-  font-size: 22px;
+  font-size: 2.2rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 15px 20px;
@@ -419,7 +430,8 @@ fieldset {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: black;
-  font-family: auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
 .submit:hover, .submit:focus,
@@ -451,6 +463,14 @@ h2 {
 
 .results a:hover {
   background-color: red;
+}
+
+.results a {
+  font-size: 1.5rem;
+}
+
+.results p {
+  margin-bottom: 20px;
 }
 
 @media (max-width: 900px) {
