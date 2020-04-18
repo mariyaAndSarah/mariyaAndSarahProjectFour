@@ -1,0 +1,52 @@
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+        background: black;
+        color: white;
+    &:hover {
+        background: red;
+    }
+    }
+}
+
+fieldset {
+    padding-bottom: 30px;
+}
+
+.questionButtons {
+    margin: 20px 0;
+    padding: 0px;
+    // The styling for the labels. 
+    label {
+        letter-spacing: 1px;
+        margin: 40px;
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+        font-size: 22px;
+        transition: 0.3s;
+        padding: 15px 20px;
+        border-radius: 20px;
+        // The styling for the labels on hover.
+        &:hover {
+            background-color: black; 
+            color: white;
+        }   
+    }
+    // Using positioning, the radio buttons were placed to the far left of the screen in order to be hidden. This allowed me to style/use the labels as the buttons for the quiz instead of using the circular radio buttons.
+    input[type="radio"] {
+        opacity: 0.01;
+        position: absolute;
+        left: -1000px;
+        // The styling for the labels of the radio buttons on focus and on checked. 
+        &:focus+label,
+        &:checked+label {
+            background-color: black;
+            color: white;
+        }
+    }
+}
