@@ -1,0 +1,13 @@
+// Media Queries
+
+@media(max-width: 900px) {
+    .elephant {
+        width: 47%;
+    }
+}
+
+@media(max-width: 450px) {
+    .elephant {
+        width: 100%;
+    }
+}

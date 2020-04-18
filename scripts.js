@@ -54,6 +54,7 @@ myElephants.clickEventQuestionOne = () => {
     })
 }
 
+
 // Gather user input values and filter API objects based on this
 myElephants.clickEventSubmit = () => {
     $('form').on('submit', function(e) {
@@ -74,23 +75,31 @@ myElephants.clickEventSubmit = () => {
 
                 const elephantName = myElephants.filteredArray[i].name;
                 const elephantImg = myElephants.filteredArray[i].image;
+                const description = myElephants.filteredArray[i].note;
+                const wikiLink = myElephants.filteredArray[i].wikilink;
+                const elephantDob = myElephants.filteredArray[i].dob;
+                const elephantDod = myElephants.filteredArray[i].dod;
                 const wikiLink = myElephants.filteredArray[i].wikilink
                 const note = myElephants.filteredArray[i].note        
-
+                
                 const elephantHtml = 
                 `
-                <div class="elephants">
+                <div class="elephant">
                     <h2>${elephantName}</h2>
                     <img src="${elephantImg}" alt="${elephantName}">
+
+                    <p>${elephantDob} - ${elephantDod}</p>
+                    <p>${description}</p>
                     <p>${note}</p>
                     <a href="${wikiLink}">Learn More!</a>
                 </div>
                 `
                 $('.results').append(elephantHtml);
-            };
-        };
-    });
-};
+
+            }
+        }
+    })
+}
 
 myElephants.clickEventReset = () => {
     $('.reset').click(function () {
