@@ -32,6 +32,9 @@ myElephants.displayElephants = (data) => {
     })
 };
 
+
+
+
 // Gather user input values and filter API objects based on this
 myElephants.clickEventSubmit = () => {
     $('form').on('submit', function(e) {
@@ -47,26 +50,28 @@ myElephants.clickEventSubmit = () => {
         for (let i = 0; i < myElephants.filteredArray.length; i++) {
             const store = myElephants.filteredArray[i].species;
             const gender = myElephants.filteredArray[i].sex;
-            const dead = myElephants.filteredArray[i].dod;
-            console.log(death)
 
-            if (store.includes(species) && gender.toLowerCase() === sex && death === "-") {
-
-                
+            if (store.includes(species) && gender.toLowerCase() === sex) {
 
                 const elephantName = myElephants.filteredArray[i].name;
                 const elephantImg = myElephants.filteredArray[i].image;
-                const wikiLink = myElephants.filteredArray[i].wikilink
+                const description = myElephants.filteredArray[i].note;
+                const wikiLink = myElephants.filteredArray[i].wikilink;
+                const elephantDob = myElephants.filteredArray[i].dob;
+                const elephantDod = myElephants.filteredArray[i].dod;
                 
                 const elephantHtml = 
                 `
-                <div class="elephants">
+                <div class="elephant">
                     <h2>${elephantName}</h2>
                     <img src="${elephantImg}" alt="${elephantName}">
+                    <p>${elephantDob} - ${elephantDod}</p>
+                    <p>${description}</p>
                     <a href="${wikiLink}">Learn More!</a>
                 </div>
                 `
                 $('.results').append(elephantHtml);
+
             }
         }
     })
