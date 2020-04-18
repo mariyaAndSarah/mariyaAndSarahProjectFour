@@ -15,7 +15,6 @@ myElephants.getElephants = () => {
     });
 };
 
-
 myElephants.displayElephants = (data) => {
     myElephants.filteredArrayOne = data.filter((filterName) => {
         const name = filterName.name;
@@ -32,55 +31,79 @@ myElephants.displayElephants = (data) => {
     })
 };
 
+// Scroll function
+myElephants.scroll = function (scrollTo) {
+    $('html, body').animate({
+        scrollTop: $(scrollTo).offset().top
+    }, 800);
+}
+
+// Scroll from start button to quiz
+myElephants.clickEventStart = () => {
+    $('header a').on('click', function (e) {
+        e.preventDefault();
+        myElephants.scroll('.firstQuestion');
+    })
+}
+
+// Scroll from first question to second 
+myElephants.clickEventQuestionOne = () => {
+    $('a.first').on('click', function (e) {
+        e.preventDefault();
+        myElephants.scroll('.secondQuestion');
+    })
+}
+
 // Gather user input values and filter API objects based on this
 myElephants.clickEventSubmit = () => {
     $('form').on('submit', function(e) {
         e.preventDefault();
+        myElephants.scroll('.results');
         $('.results').empty();
 
       // declare variables to store user input 
         const species = $('input[class="species"]:checked').val();
         const sex = $('input[class="sex"]:checked').val();
-        const death = $('input[class="death"]:checked').val();
 
         // For loop to go through and match the user input for species and sex
         for (let i = 0; i < myElephants.filteredArray.length; i++) {
             const store = myElephants.filteredArray[i].species;
             const gender = myElephants.filteredArray[i].sex;
-            const dead = myElephants.filteredArray[i].dod;
-            console.log(death)
 
-            if (store.includes(species) && gender.toLowerCase() === sex && death === "-") {
-
-                
+            if (store.includes(species) && gender.toLowerCase() === sex) {
 
                 const elephantName = myElephants.filteredArray[i].name;
                 const elephantImg = myElephants.filteredArray[i].image;
                 const wikiLink = myElephants.filteredArray[i].wikilink
-                
+                const note = myElephants.filteredArray[i].note        
+
                 const elephantHtml = 
                 `
                 <div class="elephants">
                     <h2>${elephantName}</h2>
                     <img src="${elephantImg}" alt="${elephantName}">
+                    <p>${note}</p>
                     <a href="${wikiLink}">Learn More!</a>
                 </div>
                 `
                 $('.results').append(elephantHtml);
-            }
-        }
-    })
-}
+            };
+        };
+    });
+};
 
 myElephants.clickEventReset = () => {
     $('.reset').click(function () {
         $('.results').empty();
+        myElephants.scroll('.firstQuestion');
     });
 }
 
 // Create an init function for the app
 myElephants.init = () => {
     myElephants.getElephants();
+    myElephants.clickEventStart();
+    myElephants.clickEventQuestionOne();
     myElephants.clickEventSubmit();
     myElephants.clickEventReset();
 };

@@ -5,71 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 4</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <main id="startQuiz" class="">
-        <section class="">
+    <!-- The header starts here -->
+    <header>
+        <div>
+            <h1>Choose Your Own Elephant Safari</h1>
             <!-- A short introduction to the quiz for the user -->
-            <p></p>
-            <!-- The questions for the quiz start here -->
-            <div class="" id="">
-                <form action="#" method="#" class="myForm" name="myForm">
-                    <fieldset>
-                        <!-- First question -->
-                        <h2>What species of elephant would you like to see?</h2>
-                        <div class="">
-                            <!-- Option one -->
-                            <input type="radio" name="species" value="Asian" id="Asian" autocomplete="off" class="species">
-                            <label for="asian">Asian</label>
-                            <!-- Option two -->
-                            <input type="radio" name="species" value="African" id="African" autocomplete="off" class="species">
-                            <label for="african">African</label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <!-- Second question -->
-                        <h2>Do you want to see boy elephants or girl elephants</h2>
-                        <div class="">
-                            <!-- Option one -->
-                            <input type="radio" name="sex" value="female" id="girl" autocomplete="off" class="sex">
-                            <label for="girl">Girl</label>
-                            <!-- Option two -->
-                            <input type="radio" name="sex" value="male" id="boy" autocomplete="off" class="sex">
-                            <label for="boy">Boy</label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                         Third question -->
-                        <!-- <h2>Do you want to see live elephants?</h2>
-                        <div class="cuteButton">
-                             Option one -->
-                            <!-- <input type="radio" name="death" value="live" id="live" autocomplete="off" class="death">
-                            <label for="live">Yes</label>
-                             Option two -->
-                            <!-- <input type="radio" name="death" value="dead" id="dead" autocomplete="off" class="death">
-                            <label for="dead">No, I'd prefer to visit an elephant graveyard. </label> -->
-                        <!-- </div>
-                    </fieldset> -->
-                    <!-- A horizontal line contained by a wrapper to seperate the quiz questions from the submit and reset buttons
-                    <div class="wrapper">
-                        <hr>
+            <p>Answer the questions below to start your safari!</p>
+            <a href="#firstQuestion" class="start">Start</a>
+        </div>
+    </header>
+    <main id="startQuiz" class="">
+        <form action="#" method="#" class="myForm" name="myForm">
+            <section class="firstQuestion" id="firstQuestion">
+                <fieldset>
+                    <!-- First question -->
+                    <h2>What species of elephant would you like to see?</h2>
+                    <div class="questionButtons">
+                        <!-- Option one -->
+                        <input type="radio" name="species" value="Asian" id="Asian" autocomplete="off" class="species">
+                        <label for="Asian">Asian</label>
+                        <!-- Option two -->
+                        <input type="radio" name="species" value="African" id="African" autocomplete="off" class="species">
+                        <label for="African">African</label>
                     </div>
-                    <!-- The submit and reset buttons start here -->
-                    <div class="buttons wrapper">
-                        <div>
-                            <input class="submit" type="submit" value="Start my Safari!" id="submit" />
-                        </div>
-                        <div>
-                            <input class="reset" type="reset" value="This Safari Sucks, I Want a Refund.">
-                        </div>
+                </fieldset>
+                <a href="#secondQuestion" class="first">Next Question</a>
+            </section>
+            <section class="secondQuestion" id="secondQuestion">
+                <fieldset>
+                    <!-- Second question -->
+                    <h2>Do you want to see boy elephants or girl elephants</h2>
+                    <div class="questionButtons">
+                        <!-- Option one -->
+                        <input type="radio" name="sex" value="female" id="girl" autocomplete="off" class="sex">
+                        <label for="girl">Girl</label>
+                        <!-- Option two -->
+                        <input type="radio" name="sex" value="male" id="boy" autocomplete="off" class="sex">
+                        <label for="boy">Boy</label>
                     </div>
-                </form>
+                </fieldset>
+                <div class="buttons">
+                    <input class="submit" type="submit" value="Start my Safari!" id="submit"/>
+                </div>
             </section>
-            <section class="results">
-                
-            </section>
+            <div class="results" id="results"></div>
+            <div class="buttons">
+                <input class="reset" type="reset" value="I want to try again!">
+            </div>
+        </form>
+    </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="scripts.js"></script>
 </body>
 </html>

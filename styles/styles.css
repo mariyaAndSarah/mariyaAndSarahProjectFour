@@ -235,7 +235,198 @@ html {
   overflow: hidden;
 }
 
-* {
-  background-color: mediumseagreen;
-  color: coral;
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.largeWrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+header,
+fieldset {
+  text-align: center;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none;
+  padding: 15px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header {
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+header a {
+  background-color: black;
+  color: white;
+  border: 1px solid transparent;
+  font-size: 22px;
+}
+
+header a:hover, header a:focus {
+  background-color: red;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 100px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 30px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section a {
+  background: black;
+  color: white;
+}
+
+section a:hover {
+  background: red;
+}
+
+fieldset {
+  padding-bottom: 30px;
+}
+
+.questionButtons {
+  margin: 20px 0;
+  padding: 0px;
+}
+
+.questionButtons label {
+  letter-spacing: 1px;
+  margin: 40px;
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  font-size: 22px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+
+.questionButtons label:hover {
+  background-color: black;
+  color: white;
+}
+
+.questionButtons input[type="radio"] {
+  opacity: 0.01;
+  position: absolute;
+  left: -1000px;
+}
+
+.questionButtons input[type="radio"]:focus + label,
+.questionButtons input[type="radio"]:checked + label {
+  background-color: black;
+  color: white;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submit,
+.reset {
+  text-decoration: none;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: black;
+  font-family: auto;
+}
+
+.submit:hover, .submit:focus,
+.reset:hover,
+.reset:focus {
+  background-color: red;
+}
+
+.submit {
+  margin-bottom: 10px;
+}
+
+.reset {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.results p {
+  font-size: 18px;
+}
+
+.results a {
+  background-color: black;
+  color: white;
+}
+
+.results a:hover {
+  background-color: red;
 }
