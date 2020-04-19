@@ -1,0 +1,25 @@
+.maps,
+.mapsOne {
+    visibility: hidden;
+    height: 10vh;
+    img {
+        width: 12%;
+    }
+}
+
+.mapVisible {
+    visibility: visible;
+}
+
+.dissapear,
+.dissapearOne {
+    margin-left: 632px;
+}
+
+.dissapear {
+    transform: translateY(-50px)
+}
+
+.dissapearOne {
+    transform: translateY(-113px)
+}
