@@ -286,7 +286,7 @@ header {
 }
 
 header a {
-  background-color: #4a6140;
+  background-color: #306E3D;
   color: #d8e2dc;
   font-size: 2rem;
 }
@@ -320,7 +320,7 @@ h1 {
 
 section.firstQuestion,
 section.secondQuestion {
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,18 +334,30 @@ section.secondQuestion {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #8bb174;
+  background-color: #5F7AA5;
 }
 
 section.firstQuestion a,
 section.secondQuestion a {
-  background: #af7a6d;
+  background: #F7A4B6;
   color: white;
 }
 
 section.firstQuestion a:hover,
 section.secondQuestion a:hover {
-  background: #8c6156;
+  background: #af7a6d;
+}
+
+section.firstQuestion h2,
+section.secondQuestion h2 {
+  font-weight: 400;
+  color: #d8e2dc;
+  margin-top: 50px;
+  width: 70%;
+}
+
+section.secondQuestion {
+  background-color: #306E3D;
 }
 
 fieldset {
@@ -361,8 +373,8 @@ fieldset {
   letter-spacing: 1px;
   margin: 40px;
   background-color: transparent;
-  border: 1px solid #393e41;
-  color: #393e41;
+  border: 1px solid #d8e2dc;
+  color: #d8e2dc;
   font-size: 1.8rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -387,15 +399,10 @@ fieldset {
   color: #d8e2dc;
 }
 
-h2 {
-  font-weight: 400;
-  color: #393e41;
-}
-
 .maps,
 .mapsOne {
   visibility: hidden;
-  height: 10vh;
+  height: 5vh;
 }
 
 .maps img,
@@ -408,13 +415,13 @@ h2 {
 }
 
 .dissapear {
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 .dissapearOne {
-  -webkit-transform: translateY(-113px);
-          transform: translateY(-113px);
+  -webkit-transform: translateY(-130px);
+          transform: translateY(-130px);
 }
 
 .buttons {
@@ -490,6 +497,7 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+  padding-top: 50px;
 }
 
 .results img {
@@ -522,18 +530,18 @@ h2 {
 .elephant {
   width: 30%;
   margin-bottom: 25px;
-}
-
-.hoverFact {
-  display: none;
-  background-color: #fff;
-  position: absolute;
-  width: 350px;
   padding: 20px;
   border-radius: 20px;
-  font-size: 1.5rem;
-  -webkit-animation: fadeIn ease 1s;
-          animation: fadeIn ease 1s;
+}
+
+.elephant:hover, .elephant:focus, .elephant:active {
+  -webkit-animation: fadeIn ease 1.5s;
+          animation: fadeIn ease 1.5s;
+  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #F7A4B6;
 }
 
 @-webkit-keyframes fadeIn {
@@ -551,6 +559,27 @@ h2 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.hoverFact {
+  display: none;
+  background-color: rgba(216, 226, 220, 0.7);
+  position: absolute;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  -webkit-animation: fadeIn ease 1s;
+          animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
   }
 }
 
