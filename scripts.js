@@ -104,7 +104,7 @@ myElephants.labelHover = () => {
     $('label.triggerFour').mousemove(function (e) {
         $("div#hoverFactFour").css('top', e.pageY + moveDown).css('left', e.pageX + moveRight);
     });
-  
+}
 // On click of each of the labels, append a map to the top center of the page. 
 
 // Asia label
@@ -122,6 +122,7 @@ myElephants.clickEventAfrica = () => {
         $('#firstQuestion .maps').removeClass('mapVisible');
     })
 }
+
 
 // Define a function that will contain the event listener for the submit button. This function will be called in the init function. 
 myElephants.clickEventSubmit = () => {
@@ -175,6 +176,8 @@ myElephants.clickEventSubmit = () => {
 myElephants.clickEventReset = () => {
     $('.reset').click(function () {
         $('.results').empty();
+        $('#firstQuestion .mapsOne').removeClass('mapVisible');
+        $('#firstQuestion .maps').removeClass('mapVisible');
         myElephants.scroll('body');
     });
 }
