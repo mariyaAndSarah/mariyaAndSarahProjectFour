@@ -1,15 +1,14 @@
 header {
     height: 100vh;
     background-image: url(../assets/mylon-ollila-j4ocWYAP_cs-unsplash.jpg);
-    background-size: 100%;
+    background-size: cover;
     color: $darkColor;
     background-position-y: -131px;
     background-repeat: no-repeat;
     // The styling for the start link in the header. 
     a {
-        background-color: #4a6140;
+        background-color: $accentColorDark;
         color: $lightColor;
-        border: 1px solid transparent;
         font-size: 2rem;
         // The styling for the hover and focus states for this link. 
         &:hover,
@@ -17,6 +16,10 @@ header {
             background-color: #35492d;
             color: $lightColor;
         }
+    }
+    p{
+        margin: 0 auto;
+        font-weight: 400;
     }
 }
 
@@ -31,10 +34,6 @@ h1 {
     margin-bottom: 20px;
     margin-top: 50px;
     letter-spacing: 1.3px;
-}
-
-p {
-    margin: 0 auto;
 }
 
 .byline > p:nth-child(2) {
