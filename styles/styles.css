@@ -320,7 +320,7 @@ h1 {
 
 section.firstQuestion,
 section.secondQuestion {
-  height: 100vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -390,6 +390,36 @@ fieldset {
 h2 {
   font-weight: 400;
   color: #393e41;
+}
+
+.maps,
+.mapsOne {
+  visibility: hidden;
+  height: 10vh;
+}
+
+.maps img,
+.mapsOne img {
+  width: 12%;
+}
+
+.mapVisible {
+  visibility: visible;
+}
+
+.dissapear,
+.dissapearOne {
+  margin-left: 632px;
+}
+
+.dissapear {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.dissapearOne {
+  -webkit-transform: translateY(-113px);
+          transform: translateY(-113px);
 }
 
 .buttons {
