@@ -7,24 +7,20 @@ section.secondQuestion {
     align-items: center;
     background-color: $backgroundOne;
     a {
-        background: $backgroundThree;
-        color: white;
+        background: $accentColorLight;
+        color: $lightColor;
         &:hover {
-            background: $accentColorLight;
+            background: #8c6156;
         }
     }
-
     h2 {
         font-weight: 400;
         color: $lightColor;
-        margin-top: 50px;
         width: 70%;
     }
 }
 
-section.secondQuestion {
-    background-color: #306E3D;
-}
+
 
 fieldset {
     padding-bottom: 37px;
@@ -50,7 +46,6 @@ fieldset {
             color: $lightColor;
         }   
     }
-    // Using positioning, the radio buttons were placed to the far left of the screen in order to be hidden. This allowed me to style/use the labels as the buttons for the quiz instead of using the circular radio buttons.
     input[type="radio"] {
         opacity: 0.01;
         position: absolute;
@@ -63,3 +58,26 @@ fieldset {
         }
     }
 }
+
+section.secondQuestion {
+    background-color: #306E3D;
+    label {
+        &:hover,
+        &:focus {
+            background-color: rgb(22, 55, 29);
+        }
+    }
+    input[type="radio"] {
+        opacity: 0.01;
+        position: absolute;
+        left: -1000px;
+        // The styling for the labels of the radio buttons on focus and on checked. 
+        &:focus+label,
+        &:checked+label {
+            background-color: rgb(22, 55, 29);
+            color: $lightColor;
+        }
+    }
+}
+
+
