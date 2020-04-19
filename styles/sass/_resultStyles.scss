@@ -1,11 +1,37 @@
 // Styling for API results
+.resultsBackground {
+    background-color: #8bb174;
+}
 
 .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        border-radius: 20px;
+    }
+    h2 {
+        color: $darkColor;
+    }
     a {
         font-size: 1.5rem;
+        color: $lightColor;
+        background-color: $darkColor;
+        &:hover {
+            background-color: #272a2b;
+        }
     }
-
     p {
         margin-bottom: 20px;
+        color: $darkColor;
     }
+}
+
+.elephant {
+    width: 30%;
+    margin-bottom: 25px;
 }

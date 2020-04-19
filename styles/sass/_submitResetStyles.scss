@@ -6,17 +6,19 @@
 
 .submit, 
 .reset {
+    font-size: 1.7rem;
     text-decoration: none;
     border: none;
     color: white;
-    padding: 15px 20px;
+    padding: 7px 20px;
     transition: 0.3s;
-    background-color: black;
+    background-color: $accentColorLight;
     font-family: $bodyFont;
     font-weight: 300;
     &:hover,
     &:focus {
-        background-color: red;
+        background-color: #8c6156;
+        cursor: pointer;
     }
 }
 
@@ -25,6 +27,7 @@
 }
 
 .reset {
+    margin-top: 70px;
     margin-bottom: 30px;
 }
 

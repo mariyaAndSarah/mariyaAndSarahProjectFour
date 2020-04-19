@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    color: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: $bodyFont;
@@ -33,26 +32,8 @@ a {
     transition: 0.3s;
 }
 
-// API output styling
 
-.results {
-    display: flex;
-    // flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
 
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 300px;
-        border-radius: 20px;
-    }
-}
-
-.elephant {
-    width: 30%;
-}
 
 
 

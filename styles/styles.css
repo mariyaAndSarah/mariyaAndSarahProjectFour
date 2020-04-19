@@ -240,7 +240,6 @@ html {
 }
 
 body {
-  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Josefin Sans", sans-serif;
@@ -277,34 +276,10 @@ a {
   transition: 0.3s;
 }
 
-.results {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-}
-
-.results img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 300px;
-  border-radius: 20px;
-}
-
-.elephant {
-  width: 30%;
-}
-
 header {
   height: 100vh;
   background-image: url(../assets/mylon-ollila-j4ocWYAP_cs-unsplash.jpg);
-  background-size: 100%;
+  background-size: cover;
   color: #393e41;
   background-position-y: -131px;
   background-repeat: no-repeat;
@@ -313,13 +288,17 @@ header {
 header a {
   background-color: #4a6140;
   color: #d8e2dc;
-  border: 1px solid transparent;
   font-size: 2rem;
 }
 
 header a:hover, header a:focus {
   background-color: #35492d;
   color: #d8e2dc;
+}
+
+header p {
+  margin: 0 auto;
+  font-weight: 400;
 }
 
 h1 {
@@ -333,10 +312,6 @@ h1 {
   margin-bottom: 20px;
   margin-top: 50px;
   letter-spacing: 1.3px;
-}
-
-p {
-  margin: 0 auto;
 }
 
 .byline > p:nth-child(2) {
@@ -359,21 +334,22 @@ section.secondQuestion {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #8bb174;
 }
 
 section.firstQuestion a,
 section.secondQuestion a {
-  background: black;
+  background: #af7a6d;
   color: white;
 }
 
 section.firstQuestion a:hover,
 section.secondQuestion a:hover {
-  background: red;
+  background: #8c6156;
 }
 
 fieldset {
-  padding-bottom: 30px;
+  padding-bottom: 37px;
 }
 
 .questionButtons {
@@ -385,18 +361,18 @@ fieldset {
   letter-spacing: 1px;
   margin: 40px;
   background-color: transparent;
-  color: black;
-  border: 1px solid black;
-  font-size: 2.2rem;
+  border: 1px solid #393e41;
+  color: #393e41;
+  font-size: 1.8rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  padding: 15px 20px;
+  padding: 7px 20px;
   border-radius: 20px;
 }
 
 .questionButtons label:hover {
-  background-color: black;
-  color: white;
+  background-color: #222e50;
+  color: #d8e2dc;
 }
 
 .questionButtons input[type="radio"] {
@@ -407,8 +383,13 @@ fieldset {
 
 .questionButtons input[type="radio"]:focus + label,
 .questionButtons input[type="radio"]:checked + label {
-  background-color: black;
-  color: white;
+  background-color: #222e50;
+  color: #d8e2dc;
+}
+
+h2 {
+  font-weight: 400;
+  color: #393e41;
 }
 
 .buttons {
@@ -425,13 +406,14 @@ fieldset {
 
 .submit,
 .reset {
+  font-size: 1.7rem;
   text-decoration: none;
   border: none;
   color: white;
-  padding: 15px 20px;
+  padding: 7px 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: black;
+  background-color: #af7a6d;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
@@ -439,7 +421,8 @@ fieldset {
 .submit:hover, .submit:focus,
 .reset:hover,
 .reset:focus {
-  background-color: red;
+  background-color: #8c6156;
+  cursor: pointer;
 }
 
 .submit {
@@ -447,6 +430,7 @@ fieldset {
 }
 
 .reset {
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 
@@ -467,12 +451,58 @@ h2 {
   background-color: red;
 }
 
+.resultsBackground {
+  background-color: #8bb174;
+}
+
+.results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.results img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.results h2 {
+  color: #393e41;
+}
+
 .results a {
   font-size: 1.5rem;
+  color: #d8e2dc;
+  background-color: #393e41;
+}
+
+.results a:hover {
+  background-color: #272a2b;
 }
 
 .results p {
   margin-bottom: 20px;
+  color: #393e41;
+}
+
+.elephant {
+  width: 30%;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1400px) {
+  header {
+    background-position: center;
+  }
 }
 
 @media (max-width: 900px) {

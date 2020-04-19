@@ -1,5 +1,11 @@
 // Media Queries
 
+@media(max-width: 1400px) {
+    header {
+        background-position: center;
+    }
+}
+
 @media(max-width: 900px) {
     .elephant {
         width: 47%;
