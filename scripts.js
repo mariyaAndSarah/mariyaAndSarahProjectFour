@@ -55,6 +55,57 @@ myElephants.clickEventQuestionOne = () => {
     })
 }
 
+// Create a tooltip pop up that appears on hover of each option selected.
+myElephants.labelHover = () => {
+    const moveLeft = -400;
+    const moveRight = 50;
+    const moveDown = -150;
+
+    // Trigger for Asian species label
+    $('label.triggerOne').hover(function (e) {
+        $('div#hoverFactOne').show();
+    }, function () {
+        $('div#hoverFactOne').hide();
+    });
+
+    $('label.triggerOne').mousemove(function (e) {
+        $("div#hoverFactOne").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+    });
+
+    // Trigger for African species label
+    $('label.triggerTwo').hover(function (e) {
+        $('div#hoverFactTwo').show();
+    }, function () {
+            $('div#hoverFactTwo').hide();
+    });
+
+    $('label.triggerTwo').mousemove(function (e) {
+        $("div#hoverFactTwo").css('top', e.pageY + moveDown).css('left', e.pageX + moveRight);
+    });
+
+    // Trigger for girl elephant label
+    $('label.triggerThree').hover(function (e) {
+        $('div#hoverFactThree').show();
+    }, function () {
+        $('div#hoverFactThree').hide();
+    });
+
+    $('label.triggerThree').mousemove(function (e) {
+        $("div#hoverFactThree").css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+    });
+
+    // Trigger for boy elephant label
+    $('label.triggerFour').hover(function (e) {
+        $('div#hoverFactFour').show();
+    }, function () {
+            $('div#hoverFactFour').hide();
+    });
+
+    $('label.triggerFour').mousemove(function (e) {
+        $("div#hoverFactFour").css('top', e.pageY + moveDown).css('left', e.pageX + moveRight);
+    });
+}
+
 // Define a function that will contain the event listener for the submit button. This function will be called in the init function. 
 myElephants.clickEventSubmit = () => {
     $('form').on('submit', function(e) {
@@ -115,6 +166,7 @@ myElephants.clickEventReset = () => {
 myElephants.init = () => {
     myElephants.getElephants();
     myElephants.clickEventStart();
+    myElephants.labelHover();
     myElephants.clickEventQuestionOne();
     myElephants.clickEventSubmit();
     myElephants.clickEventReset();

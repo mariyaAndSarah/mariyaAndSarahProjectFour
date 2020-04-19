@@ -499,6 +499,36 @@ h2 {
   margin-bottom: 25px;
 }
 
+.hoverFact {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  -webkit-animation: fadeIn ease 1s;
+          animation: fadeIn ease 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1400px) {
   header {
     background-position: center;
