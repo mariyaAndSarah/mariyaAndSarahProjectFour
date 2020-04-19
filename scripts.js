@@ -59,8 +59,7 @@ myElephants.clickEventQuestionOne = () => {
 
 // Asia label
 myElephants.clickEventAsia = () => {
-    $('label.asia').on('click', function(e){
-        e.preventDefault();
+    $('label.asia').on('click', function(){
         $('#firstQuestion .maps').addClass('mapVisible');
         $('#firstQuestion .mapsOne').removeClass('mapVisible');
     })
@@ -68,8 +67,7 @@ myElephants.clickEventAsia = () => {
 
 // Africa label
 myElephants.clickEventAfrica = () => {
-    $('label.africa').on('click', function (e) {
-        e.preventDefault();
+    $('label.africa').on('click', function () {
         $('#firstQuestion .mapsOne').addClass('mapVisible');
         $('#firstQuestion .maps').removeClass('mapVisible');
     })
