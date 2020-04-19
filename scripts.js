@@ -57,8 +57,8 @@ myElephants.clickEventQuestionOne = () => {
 
 // Create a tooltip pop up that appears on hover of each option selected.
 myElephants.labelHover = () => {
-    const moveLeft = -400;
-    const moveRight = 50;
+    const moveLeft = -420;
+    const moveRight = 60;
     const moveDown = -150;
 
     // Trigger for Asian species label

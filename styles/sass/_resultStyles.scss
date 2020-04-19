@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
+    padding-top: 50px;
     img {
         object-fit: cover;
         width: 100%;
@@ -34,4 +35,21 @@
 .elephant {
     width: 30%;
     margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 20px;
+
+    &:hover, &:focus, &:active {
+        animation: fadeIn ease 1.5s;
+        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        background-color: $backgroundThree;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
 }

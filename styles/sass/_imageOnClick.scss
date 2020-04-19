@@ -1,7 +1,7 @@
 .maps,
 .mapsOne {
     visibility: hidden;
-    height: 10vh;
+    height: 5vh;
     img {
         width: 200px;
     }
@@ -12,9 +12,9 @@
 }
 
 .dissapear {
-    transform: translateY(-50px)
+    transform: translateY(-100px)
 }
 
 .dissapearOne {
-    transform: translateY(-113px)
+    transform: translateY(-130px)
 }

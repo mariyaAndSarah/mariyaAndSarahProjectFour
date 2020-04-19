@@ -1,18 +1,29 @@
 section.firstQuestion,
 section.secondQuestion {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #8bb174;
+    background-color: $backgroundOne;
     a {
-        background: $accentColorLight;
+        background: $backgroundThree;
         color: white;
-    &:hover {
-        background: #8c6156;
+        &:hover {
+            background: $accentColorLight;
+        }
     }
+
+    h2 {
+        font-weight: 400;
+        color: $lightColor;
+        margin-top: 50px;
+        width: 70%;
     }
+}
+
+section.secondQuestion {
+    background-color: #306E3D;
 }
 
 fieldset {
@@ -27,8 +38,8 @@ fieldset {
         letter-spacing: 1px;
         margin: 40px;
         background-color: transparent;
-        border: 1px solid $darkColor;
-        color: $darkColor;
+        border: 1px solid $lightColor;
+        color: $lightColor;
         font-size: 1.8rem;
         transition: 0.3s;
         padding: 7px 20px;
@@ -51,9 +62,4 @@ fieldset {
             color: $lightColor;
         }
     }
-}
-
-h2 {
-    font-weight: 400;
-    color: $darkColor;
 }
