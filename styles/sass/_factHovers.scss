@@ -1,22 +1,16 @@
 // Fact hover styling
 
+div .hoverFact {
+  @include fade;
+}
+
 .hoverFact {
     display: none;
     background-color: rgba(216, 226, 220, 0.7);
     position: absolute;
+    animation: fadeIn 0.2s ease-in-out;
     width: 350px;
     padding: 20px;
     border-radius: 20px;
     font-size: 1.5rem;
-
-    animation: fadeIn ease 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:0.7;
-  }
 }

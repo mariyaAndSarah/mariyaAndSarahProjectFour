@@ -353,6 +353,7 @@ section.secondQuestion h2 {
   font-size: 30px;
   font-weight: 400;
   color: #d8e2dc;
+  margin-top: 50px 15% 30px 15%;
   width: 70%;
 }
 
@@ -542,24 +543,38 @@ section.secondQuestion input[type="radio"]:checked + label {
   transition: all 0.2s;
 }
 
-.elephant:hover, .elephant:focus, .elephant:active {
-  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-  background-color: #af7a6d;
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
-.hoverFact {
-  display: none;
-  background-color: rgba(216, 226, 220, 0.7);
-  position: absolute;
-  width: 350px;
-  padding: 20px;
-  border-radius: 20px;
-  font-size: 1.5rem;
-  -webkit-animation: fadeIn ease 1s;
-          animation: fadeIn ease 1s;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.elephant:hover, .elephant:focus, .elephant:active {
+  -webkit-animation: fadeIn 0.2s ease;
+          animation: fadeIn 0.2s ease;
+  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: rgba(247, 164, 182, 0.7);
 }
 
 @-webkit-keyframes fadeIn {
@@ -575,9 +590,24 @@ section.secondQuestion input[type="radio"]:checked + label {
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0.4;
+  }
   100% {
     opacity: 0.7;
   }
+}
+
+.hoverFact {
+  display: none;
+  background-color: rgba(216, 226, 220, 0.7);
+  position: absolute;
+  -webkit-animation: fadeIn 0.2s ease-in-out;
+          animation: fadeIn 0.2s ease-in-out;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1400px) {
