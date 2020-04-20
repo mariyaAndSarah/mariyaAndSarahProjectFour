@@ -5,6 +5,16 @@ header {
     color: $darkColor;
     background-position-y: -131px;
     background-repeat: no-repeat;
+    padding: 0px 20px;
+    h1 {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 5rem;
+        text-transform: uppercase;
+        width: 70%;
+        margin: 50px auto 20px;
+        letter-spacing: 1.3px;
+    }
     // The styling for the start link in the header. 
     a {
         background-color: $accentColorDark;
@@ -23,18 +33,7 @@ header {
     }
 }
 
-h1 {
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 5rem;
-    text-transform: uppercase;
-    margin-top: 40px;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    letter-spacing: 1.3px;
-}
+
 
 .byline > p:nth-child(2) {
     padding-bottom: 45px;

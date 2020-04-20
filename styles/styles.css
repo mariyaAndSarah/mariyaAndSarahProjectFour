@@ -283,6 +283,17 @@ header {
   color: #393e41;
   background-position-y: -131px;
   background-repeat: no-repeat;
+  padding: 0px 20px;
+}
+
+header h1 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 5rem;
+  text-transform: uppercase;
+  width: 70%;
+  margin: 50px auto 20px;
+  letter-spacing: 1.3px;
 }
 
 header a {
@@ -299,19 +310,6 @@ header a:hover, header a:focus {
 header p {
   margin: 0 auto;
   font-weight: 400;
-}
-
-h1 {
-  font-family: 'Montserrat';
-  font-weight: 400;
-  font-size: 5rem;
-  text-transform: uppercase;
-  margin-top: 40px;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  letter-spacing: 1.3px;
 }
 
 .byline > p:nth-child(2) {
@@ -353,7 +351,6 @@ section.secondQuestion h2 {
   font-size: 30px;
   font-weight: 400;
   color: #d8e2dc;
-  margin-top: 50px 15% 30px 15%;
   width: 70%;
 }
 
@@ -539,37 +536,11 @@ section.secondQuestion input[type="radio"]:checked + label {
   margin-bottom: 25px;
   padding: 20px;
   border-radius: 20px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0.7;
-  }
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .elephant:hover, .elephant:focus, .elephant:active {
-  -webkit-animation: fadeIn 0.2s ease;
-          animation: fadeIn 0.2s ease;
   -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(1.05);
@@ -580,6 +551,9 @@ section.secondQuestion input[type="radio"]:checked + label {
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
   }
   100% {
     opacity: 0.7;
@@ -610,9 +584,21 @@ section.secondQuestion input[type="radio"]:checked + label {
   font-size: 1.5rem;
 }
 
+@media (max-width: 1155px) {
+  header h1 {
+    width: 70%;
+  }
+}
+
 @media (max-width: 1400px) {
   header {
     background-position: center;
+  }
+}
+
+@media (max-width: 990px) {
+  header h1 {
+    width: 70%;
   }
 }
 
@@ -622,8 +608,56 @@ section.secondQuestion input[type="radio"]:checked + label {
   }
 }
 
+@media (max-width: 715px) {
+  header h1 {
+    font-size: 4rem;
+  }
+  header .byline {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  header h1 {
+    width: 90%;
+    font-size: 3.5rem;
+  }
+  header .byline {
+    font-size: 1.3rem;
+  }
+  header .byline p:nth-child(2) {
+    padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 490px) {
+  .questionButtons label {
+    margin: 20px;
+    font-size: 1.6rem;
+  }
+}
+
 @media (max-width: 450px) {
   .elephant {
     width: 100%;
+  }
+}
+
+@media (max-width: 405px) {
+  header h1 {
+    width: 100%;
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .questionButtons {
+    margin: 20px 0;
+    padding: 0px;
+  }
+  .questionButtons label {
+    margin: 6px;
+    font-size: 1.6rem;
+    padding: 7px 20px;
   }
 }
