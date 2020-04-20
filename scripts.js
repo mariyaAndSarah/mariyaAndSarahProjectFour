@@ -178,9 +178,9 @@ myElephants.clickEventSubmit = () => {
                 // The HTML that will be appended. 
                 const elephantHtml = 
                 `
-                <div class="elephant">
+                <div class="elephant" tabindex="0">
                     <h2> 🐘 ${elephantName}</h2>
-                    <img src="${elephantImg}" alt="A ${elephantType} elephant named ${elephantName}">
+                    <img src="${elephantImg}" alt="An ${elephantType} elephant named ${elephantName}">
                     <p>${elephantDob} - ${elephantDod}</p>
                     <p>${description}</p>
                     <a href="${wikiLink} ">Learn More</a>
