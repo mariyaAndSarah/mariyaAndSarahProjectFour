@@ -1,11 +1,4 @@
 // Media Queries
-@media(max-width: 1155px ){
-    header{
-        h1{
-            width: 70%;
-        }
-    }
-}
 
 @media(max-width: 1400px) {
     header {
@@ -13,28 +6,27 @@
     }
 }
 
-@media(max-width: 990px) {
-    header{
+@media(max-width: 1170px) {
+    header {
         h1{
             width: 70%;
+            font-size: 4rem;
         }
+        .byline {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    .hoverFact {
+        font-size: 1rem;
     }
 }
 
 @media(max-width: 900px) {
     .elephant {
         width: 47%;
-    }
-}
-
-@media(max-width: 715px) {
-    header{
-        h1{
-            font-size: 4rem;
-        }
-        .byline {
-            font-size: 1.5rem;
-        }
     }
 }
 
@@ -51,6 +43,10 @@
             }
         }    
     }
+
+    .elephant {
+        width: 100%;
+    }
 }
 
 @media(max-width: 490px) {
@@ -59,12 +55,6 @@
             margin: 20px;
             font-size: 1.6rem;
         }
-    }
-}
-
-@media(max-width: 450px) {
-    .elephant {
-        width: 100%;
     }
 }
 
@@ -89,3 +79,4 @@
         }
     }
 }
+

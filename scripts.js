@@ -57,9 +57,9 @@ myElephants.clickEventQuestionOne = () => {
 
 // Create a tooltip pop up that appears on hover of each option selected.
 myElephants.labelHover = () => {
-    const moveLeft = -420;
+    const moveLeft = -400;
     const moveRight = 60;
-    const moveDown = -150;
+    const moveDown = -170;
 
     // Trigger for Asian species label
     $('label.triggerOne').hover(function (e) {
@@ -172,17 +172,18 @@ myElephants.clickEventSubmit = () => {
                 const description = myElephants.filteredArray[i].note;
                 const wikiLink = myElephants.filteredArray[i].wikilink;
                 const elephantDob = myElephants.filteredArray[i].dob;
-                const elephantDod = myElephants.filteredArray[i].dod;      
+                const elephantDod = myElephants.filteredArray[i].dod;    
+                const elephantType = myElephants.filteredArray[i].species;  
                 
                 // The HTML that will be appended. 
                 const elephantHtml = 
                 `
                 <div class="elephant">
                     <h2> 🐘 ${elephantName}</h2>
-                    <img src="${elephantImg}" alt="${elephantName}">
+                    <img src="${elephantImg}" alt="A ${elephantType} elephant named ${elephantName}">
                     <p>${elephantDob} - ${elephantDod}</p>
                     <p>${description}</p>
-                    <a href="${wikiLink}">Learn More</a>
+                    <a href="${wikiLink} ">Learn More</a>
                 </div>
                 `
                 // Appending the HTML to the 'results' section. 
