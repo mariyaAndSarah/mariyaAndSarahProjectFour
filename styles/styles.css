@@ -352,7 +352,7 @@ section.firstQuestion h2,
 section.secondQuestion h2 {
   font-weight: 400;
   color: #d8e2dc;
-  margin-top: 50px;
+  margin-top: 50px 15% 30px 15%;
   width: 70%;
 }
 
@@ -534,22 +534,15 @@ h2 {
   border-radius: 20px;
 }
 
-.elephant:hover, .elephant:focus, .elephant:active {
-  -webkit-animation: fadeIn ease 1.5s;
-          animation: fadeIn ease 1.5s;
-  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  background-color: #F7A4B6;
-}
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0.4;
+  }
   100% {
-    opacity: 1;
+    opacity: 0.7;
   }
 }
 
@@ -557,8 +550,33 @@ h2 {
   0% {
     opacity: 0;
   }
+  50% {
+    opacity: 0.4;
+  }
   100% {
-    opacity: 1;
+    opacity: 0.7;
+  }
+}
+
+.elephant:hover, .elephant:focus, .elephant:active {
+  -webkit-animation: fadeIn 0.2s ease;
+          animation: fadeIn 0.2s ease;
+  -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: rgba(247, 164, 182, 0.7);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.7;
   }
 }
 
@@ -566,21 +584,12 @@ h2 {
   display: none;
   background-color: rgba(216, 226, 220, 0.7);
   position: absolute;
+  -webkit-animation: fadeIn 0.2s ease-in-out;
+          animation: fadeIn 0.2s ease-in-out;
   width: 350px;
   padding: 20px;
   border-radius: 20px;
   font-size: 1.5rem;
-  -webkit-animation: fadeIn ease 1s;
-          animation: fadeIn ease 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.7;
-  }
 }
 
 @media (max-width: 1400px) {

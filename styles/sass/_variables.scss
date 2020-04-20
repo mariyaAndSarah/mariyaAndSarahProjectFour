@@ -2,6 +2,8 @@
 
 $bodyFont: 'Josefin Sans', sans-serif;
 $headerFont: 'Josefin Sans', sans-serif;
+
+
 $darkColor: #393e41;
 $lightColor: #d8e2dc;
 $accentColorDark: #306E3D;
@@ -9,3 +11,17 @@ $accentColorLight: #af7a6d;
 $backgroundOne: #5F7AA5;
 $backgroundThree: #F7A4B6;
 $tertiaryColor: #8bb174;
+
+@mixin fade {
+    @keyframes fadeIn {
+        0% {
+            opacity:0;
+        }
+        50% {
+            opacity:0.4;
+        }
+        100% {
+            opacity:0.7;
+        }
+    }
+}

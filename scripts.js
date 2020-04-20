@@ -105,6 +105,7 @@ myElephants.labelHover = () => {
         $("div#hoverFactFour").css('top', e.pageY + moveDown).css('left', e.pageX + moveRight);
     });
 }
+
 // On click of each of the labels, append a map to the top center of the page. 
 
 // Asia label
@@ -158,7 +159,7 @@ myElephants.clickEventSubmit = () => {
                 const elephantHtml = 
                 `
                 <div class="elephant">
-                    <h2>${elephantName}</h2>
+                    <h2> 🐘 ${elephantName}</h2>
                     <img src="${elephantImg}" alt="${elephantName}">
                     <p>${elephantDob} - ${elephantDod}</p>
                     <p>${description}</p>
