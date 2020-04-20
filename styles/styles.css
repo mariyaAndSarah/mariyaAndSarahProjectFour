@@ -442,6 +442,16 @@ section.secondQuestion input[type="radio"]:checked + label {
           transform: translateY(-170px);
 }
 
+.dissapearTwo {
+  -webkit-transform: translateY(-98px);
+          transform: translateY(-98px);
+}
+
+.dissapearThree {
+  -webkit-transform: translateY(-135px);
+          transform: translateY(-135px);
+}
+
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
