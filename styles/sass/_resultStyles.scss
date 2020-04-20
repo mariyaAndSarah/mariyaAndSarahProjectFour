@@ -37,19 +37,12 @@
     margin-bottom: 25px;
     padding: 20px;
     border-radius: 20px;
+    @include fade;
 
     &:hover, &:focus, &:active {
-        animation: fadeIn ease 1.5s;
+        animation: fadeIn 0.2s ease;
         box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
         transform: scale(1.05);
-        background-color: $backgroundThree;
-    }
-    @keyframes fadeIn {
-        0% {
-            opacity:0;
-        }
-        100% {
-            opacity:1;
-        }
+        background-color: rgba(247, 164, 182, 0.7);
     }
 }
