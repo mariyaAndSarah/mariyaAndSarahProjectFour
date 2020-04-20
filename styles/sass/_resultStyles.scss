@@ -17,6 +17,7 @@
     }
     h2 {
         font-size: 30px;
+        font-weight: 400;
         color: $darkColor;
     }
     a {
@@ -39,19 +40,11 @@
     margin-bottom: 25px;
     padding: 20px;
     border-radius: 20px;
-    
+    transition: all 0.2s;
+
     &:hover, &:focus, &:active {
-        animation: fadeIn ease 1.5s;
         box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-        transform: scale(1.02);
-        background-color: $backgroundThree;
-    }
-    @keyframes fadeIn {
-        0% {
-            opacity:0;
-        }
-        100% {
-            opacity:1;
-        }
+        transform: scale(1.01);
+        background-color: $accentColorLight;
     }
 }
