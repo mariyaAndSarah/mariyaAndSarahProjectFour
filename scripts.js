@@ -153,7 +153,7 @@ myElephants.clickEventSubmit = () => {
         // In addition, the 'results' section of the app will be emptied every click of the submit button. 
         $('.results').empty();
 
-        $('audio#pop')[0].play()
+        // $('audio#pop')[0].play()
     
         // Declare two variables that will store the user input for each of the two questions.
         const species = $('input[class="species"]:checked').val();
