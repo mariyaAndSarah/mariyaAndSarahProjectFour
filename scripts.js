@@ -183,8 +183,8 @@ myElephants.clickEventSubmit = () => {
                 const elephantHtml = 
                 `
                 <div class="elephant" tabindex="0">
-                    <h2>${elephantName}</h2>
-                    <img src="${elephantImg}" alt="A ${elephantType} elephant named ${elephantName}">
+                    <h2> 🐘 ${elephantName}</h2>
+                    <img src="${elephantImg}" alt="An ${elephantType} elephant named ${elephantName}">
                     <p>${elephantDob} - ${elephantDod}</p>
                     <p>${description}</p>
                     <a href="${wikiLink} ">Learn More</a>
