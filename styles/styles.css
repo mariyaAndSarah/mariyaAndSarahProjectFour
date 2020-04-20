@@ -350,6 +350,7 @@ section.secondQuestion a:hover {
 
 section.firstQuestion h2,
 section.secondQuestion h2 {
+  font-size: 30px;
   font-weight: 400;
   color: #d8e2dc;
   width: 70%;
@@ -485,23 +486,6 @@ section.secondQuestion input[type="radio"]:checked + label {
   margin-bottom: 30px;
 }
 
-h2 {
-  font-size: 30px;
-}
-
-.results p {
-  font-size: 18px;
-}
-
-.results a {
-  background-color: black;
-  color: white;
-}
-
-.results a:hover {
-  background-color: red;
-}
-
 .resultsBackground {
   background-color: #8bb174;
 }
@@ -528,6 +512,7 @@ h2 {
 }
 
 .results h2 {
+  font-size: 30px;
   color: #393e41;
 }
 
@@ -542,6 +527,7 @@ h2 {
 }
 
 .results p {
+  font-size: 18px;
   margin-bottom: 20px;
   color: #393e41;
 }

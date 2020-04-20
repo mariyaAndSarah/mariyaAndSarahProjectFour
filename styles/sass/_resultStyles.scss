@@ -16,6 +16,7 @@
         border-radius: 20px;
     }
     h2 {
+        font-size: 30px;
         color: $darkColor;
     }
     a {
@@ -27,6 +28,7 @@
         }
     }
     p {
+        font-size: 18px;
         margin-bottom: 20px;
         color: $darkColor;
     }
@@ -37,7 +39,7 @@
     margin-bottom: 25px;
     padding: 20px;
     border-radius: 20px;
-
+    
     &:hover, &:focus, &:active {
         animation: fadeIn ease 1.5s;
         box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
