@@ -106,24 +106,41 @@ myElephants.labelHover = () => {
     });
 }
 
-// On click of each of the labels, append a map to the top center of the page. 
+// On click of each of the species labels, append a map to the top center of the page. 
 
 // Asia label
 myElephants.clickEventAsia = () => {
     $('label.asia').on('click', function(){
-        $('#firstQuestion .maps').addClass('mapVisible');
-        $('#firstQuestion .mapsOne').removeClass('mapVisible');
+        $('#firstQuestion .maps').addClass('visible');
+        $('#firstQuestion .mapsOne').removeClass('visible');
     })
 }
 
 // Africa label
 myElephants.clickEventAfrica = () => {
     $('label.africa').on('click', function () {
-        $('#firstQuestion .mapsOne').addClass('mapVisible');
-        $('#firstQuestion .maps').removeClass('mapVisible');
+        $('#firstQuestion .mapsOne').addClass('visible');
+        $('#firstQuestion .maps').removeClass('visible');
     })
 }
 
+// On click of each of the gender labels, append a gendered elephant to the top center of the page. 
+
+// Girl label
+myElephants.clickEventGirl = () => {
+    $('label.girl').on('click', function () {
+        $('#secondQuestion .girlPicture').addClass('visible');
+        $('#secondQuestion .boyPicture').removeClass('visible');
+    })
+}
+
+// Boy label
+myElephants.clickEventBoy = () => {
+    $('label.boy').on('click', function () {
+        $('#secondQuestion .boyPicture').addClass('visible');
+        $('#secondQuestion .girlPicture').removeClass('visible');
+    })
+}
 
 // Define a function that will contain the event listener for the submit button. This function will be called in the init function. 
 myElephants.clickEventSubmit = () => {
@@ -136,6 +153,8 @@ myElephants.clickEventSubmit = () => {
         // In addition, the 'results' section of the app will be emptied every click of the submit button. 
         $('.results').empty();
 
+        $('audio#pop')[0].play()
+    
         // Declare two variables that will store the user input for each of the two questions.
         const species = $('input[class="species"]:checked').val();
         const sex = $('input[class="sex"]:checked').val();
@@ -177,8 +196,7 @@ myElephants.clickEventSubmit = () => {
 myElephants.clickEventReset = () => {
     $('.reset').click(function () {
         $('.results').empty();
-        $('#firstQuestion .mapsOne').removeClass('mapVisible');
-        $('#firstQuestion .maps').removeClass('mapVisible');
+        $('#firstQuestion .mapsOne, #firstQuestion .maps, #secondQuestion .girlPicture, #secondQuestion .boyPicture').removeClass('visible');
         myElephants.scroll('body');
     });
 }
@@ -190,6 +208,8 @@ myElephants.init = () => {
     myElephants.labelHover();
     myElephants.clickEventAsia();
     myElephants.clickEventAfrica();
+    myElephants.clickEventGirl();
+    myElephants.clickEventBoy();
     myElephants.clickEventQuestionOne();
     myElephants.clickEventSubmit();
     myElephants.clickEventReset();

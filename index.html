@@ -8,9 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <audio id="pop"><source src="./assets/elephant9.mp3" type="audio/mpeg"></audio>
 </head>
-
 <body>
+    <!-- The html for the audio used in the scripts.js file -->
+    <audio id="pop">
+        <source src="./assets/elephant9.mp3" type="audio/mpeg">Your browser does not support the <code>audio</code> element.
+    </audio>
     <!-- The header starts here -->
     <header>
         <div>
@@ -27,10 +31,10 @@
         <form action="#" method="#" class="myForm" name="myForm">
             <section class="firstQuestion" id="firstQuestion">
                 <div class="maps">
-                    <img src="./assets/pngguru.com.png" alt="" class="dissapear">
+                    <img src="./assets/pngguru.com.png" alt="A map of Asia" class="dissapear">
                 </div>
                 <div class="mapsOne">
-                    <img src="./assets/africa.png" alt="" class="dissapearOne">
+                    <img src="./assets/africa.png" alt="A map of Africa" class="dissapearOne">
                 </div>
                 <fieldset>
                     <!-- First question -->
@@ -53,19 +57,25 @@
                 <a href="#secondQuestion" class="first">Next Question</a>
             </section>
             <section class="secondQuestion" id="secondQuestion">
+                <div class="girlPicture">
+                    <img src="" alt="A girl elephant" class="dissapearTwo">
+                </div>
+                <div class="boyPicture">
+                    <img src="" alt="A boy elephant" class="dissapearThree">
+                </div>
                 <fieldset>
                     <!-- Second question -->
-                    <h2>Do you want to see boy elephants or girl elephants?</h2>
+                    <h2>Do you want to see girl elephants or boy elephants?</h2>
                     <div class="questionButtons">
                         <!-- Option one -->
                         <input type="radio" name="sex" value="female" id="girl" autocomplete="off" class="sex">
-                        <label for="girl" class="triggerThree">Girl</label>
+                        <label for="girl" class="triggerThree girl">Girl</label>
                         <div id="hoverFactThree" class="hoverFact">
                             <p>Elephant families have a <strong>matriarchal head</strong>, meaning that an older, experienced lady elephant leads the herd. A family usually consist of a mother, her sisters, daughters their babies (calves).  Occasionally, non-related elephants join to form families. Female family units range from three to twenty five elephants.</p>
                         </div>
                         <!-- Option two -->
                         <input type="radio" name="sex" value="male" id="boy" autocomplete="off" class="sex">
-                        <label for="boy" class="triggerFour">Boy</label>
+                        <label for="boy" class="triggerFour boy">Boy</label>
                         <div id="hoverFactFour" class="hoverFact">
                             <p>Adult <strong>male elephants</strong> live a predominantly nomadic and solitary life. When a male elephant (bull) reaches puberty, around 12 to 15 years of age, he will gradually become more independent of his family until he breaks away completely, to either roam alone or find a loosely-knit group of male elephants to join.</p>
                         </div>

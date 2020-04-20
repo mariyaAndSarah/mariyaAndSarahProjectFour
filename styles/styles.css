@@ -339,25 +339,22 @@ section.secondQuestion {
 
 section.firstQuestion a,
 section.secondQuestion a {
-  background: #F7A4B6;
-  color: white;
+  background: #af7a6d;
+  color: #d8e2dc;
 }
 
 section.firstQuestion a:hover,
 section.secondQuestion a:hover {
-  background: #af7a6d;
+  background: #8c6156;
 }
 
 section.firstQuestion h2,
 section.secondQuestion h2 {
+  font-size: 30px;
   font-weight: 400;
   color: #d8e2dc;
   margin-top: 50px 15% 30px 15%;
   width: 70%;
-}
-
-section.secondQuestion {
-  background-color: #306E3D;
 }
 
 fieldset {
@@ -399,29 +396,53 @@ fieldset {
   color: #d8e2dc;
 }
 
+section.secondQuestion {
+  background-color: #306E3D;
+}
+
+section.secondQuestion label:hover, section.secondQuestion label:focus {
+  background-color: #16371d;
+}
+
+section.secondQuestion input[type="radio"] {
+  opacity: 0.01;
+  position: absolute;
+  left: -1000px;
+}
+
+section.secondQuestion input[type="radio"]:focus + label,
+section.secondQuestion input[type="radio"]:checked + label {
+  background-color: #16371d;
+  color: #d8e2dc;
+}
+
 .maps,
-.mapsOne {
+.mapsOne,
+.girlPicture,
+.boyPicture {
   visibility: hidden;
   height: 5vh;
 }
 
 .maps img,
-.mapsOne img {
+.mapsOne img,
+.girlPicture img,
+.boyPicture img {
   width: 200px;
 }
 
-.mapVisible {
+.visible {
   visibility: visible;
 }
 
 .dissapear {
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  -webkit-transform: translateY(-128px);
+          transform: translateY(-128px);
 }
 
 .dissapearOne {
-  -webkit-transform: translateY(-130px);
-          transform: translateY(-130px);
+  -webkit-transform: translateY(-170px);
+          transform: translateY(-170px);
 }
 
 .buttons {
@@ -441,7 +462,7 @@ fieldset {
   font-size: 1.7rem;
   text-decoration: none;
   border: none;
-  color: white;
+  color: #d8e2dc;
   padding: 7px 20px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -464,23 +485,6 @@ fieldset {
 .reset {
   margin-top: 70px;
   margin-bottom: 30px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-.results p {
-  font-size: 18px;
-}
-
-.results a {
-  background-color: black;
-  color: white;
-}
-
-.results a:hover {
-  background-color: red;
 }
 
 .resultsBackground {
@@ -509,6 +513,8 @@ h2 {
 }
 
 .results h2 {
+  font-size: 30px;
+  font-weight: 400;
   color: #393e41;
 }
 
@@ -523,6 +529,7 @@ h2 {
 }
 
 .results p {
+  font-size: 18px;
   margin-bottom: 20px;
   color: #393e41;
 }
@@ -532,6 +539,8 @@ h2 {
   margin-bottom: 25px;
   padding: 20px;
   border-radius: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -566,6 +575,15 @@ h2 {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: rgba(247, 164, 182, 0.7);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 @keyframes fadeIn {
