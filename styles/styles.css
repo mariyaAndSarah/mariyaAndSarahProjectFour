@@ -365,7 +365,7 @@ fieldset {
 
 .questionButtons label {
   letter-spacing: 1px;
-  margin: 40px;
+  margin: 25px;
   background-color: transparent;
   border: 1px solid #d8e2dc;
   color: #d8e2dc;
@@ -425,6 +425,16 @@ section.secondQuestion input[type="radio"]:checked + label {
 .mapsOne img,
 .girlPicture img,
 .boyPicture img {
+  width: 200px;
+}
+
+.defaultGender,
+.defaultMap {
+  height: 5vh;
+}
+
+.defaultGender img,
+.defaultMap img {
   width: 200px;
 }
 
@@ -520,7 +530,7 @@ section.secondQuestion input[type="radio"]:checked + label {
 }
 
 .results h2 {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 400;
   color: #393e41;
 }
@@ -536,7 +546,8 @@ section.secondQuestion input[type="radio"]:checked + label {
 }
 
 .results p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
   margin-bottom: 20px;
   color: #393e41;
 }
@@ -682,10 +693,6 @@ section.secondQuestion input[type="radio"]:checked + label {
 }
 
 @media (max-width: 380px) {
-  .questionButtons {
-    margin: 20px 0;
-    padding: 0px;
-  }
   .questionButtons label {
     margin: 6px;
     font-size: 1.6rem;

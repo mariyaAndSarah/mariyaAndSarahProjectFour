@@ -9,6 +9,14 @@
     }
 }
 
+.defaultGender,
+.defaultMap {
+    height: 5vh;
+    img {
+        width: 200px;
+    }
+}
+
 .visible {
     visibility: visible;
 }
