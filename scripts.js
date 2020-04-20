@@ -113,6 +113,7 @@ myElephants.clickEventAsia = () => {
     $('label.asia').on('click', function(){
         $('#firstQuestion .maps').addClass('visible');
         $('#firstQuestion .mapsOne').removeClass('visible');
+        $('#firstQuestion .defaultMap').empty();
     })
 }
 
@@ -121,6 +122,7 @@ myElephants.clickEventAfrica = () => {
     $('label.africa').on('click', function () {
         $('#firstQuestion .mapsOne').addClass('visible');
         $('#firstQuestion .maps').removeClass('visible');
+        $('#firstQuestion .defaultMap').empty();
     })
 }
 
@@ -131,6 +133,7 @@ myElephants.clickEventGirl = () => {
     $('label.girl').on('click', function () {
         $('#secondQuestion .girlPicture').addClass('visible');
         $('#secondQuestion .boyPicture').removeClass('visible');
+        $('#secondQuestion .defaultGender').empty();
     })
 }
 
@@ -139,6 +142,7 @@ myElephants.clickEventBoy = () => {
     $('label.boy').on('click', function () {
         $('#secondQuestion .boyPicture').addClass('visible');
         $('#secondQuestion .girlPicture').removeClass('visible');
+        $('#secondQuestion .defaultGender').empty();
     })
 }
 
