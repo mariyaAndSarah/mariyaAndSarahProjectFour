@@ -627,6 +627,17 @@ section.secondQuestion input[type="radio"]:checked + label {
   }
 }
 
+@media (max-width: 587px) {
+  .dissapearTwo {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  .dissapearThree {
+    -webkit-transform: translateY(-112px);
+            transform: translateY(-112px);
+  }
+}
+
 @media (max-width: 560px) {
   header h1 {
     width: 90%;
@@ -637,6 +648,24 @@ section.secondQuestion input[type="radio"]:checked + label {
   }
   header .byline p:nth-child(2) {
     padding-bottom: 35px;
+  }
+}
+
+@media (max-width: 537px) {
+  .dissapear {
+    -webkit-transform: translateY(-107px);
+            transform: translateY(-107px);
+  }
+  .dissapearOne {
+    -webkit-transform: translateY(-152px);
+            transform: translateY(-152px);
+  }
+}
+
+@media (max-width: 354px) {
+  .dissapearOne {
+    -webkit-transform: translateY(-143px);
+            transform: translateY(-143px);
   }
 }
 

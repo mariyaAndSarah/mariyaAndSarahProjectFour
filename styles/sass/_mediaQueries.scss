@@ -38,6 +38,16 @@
     }
 }
 
+@media(max-width: 587px) {
+    .dissapearTwo {
+        transform: translateY(-80px);
+    }
+    
+    .dissapearThree {
+        transform: translateY(-112px);
+    }
+}
+
 @media(max-width: 560px) {
     header{
         h1{
@@ -50,6 +60,21 @@
                 padding-bottom: 35px;
             }
         }    
+    }
+}
+
+@media(max-width: 537px){
+    .dissapear {
+        transform: translateY(-107px);
+    }
+    .dissapearOne{
+        transform: translateY(-152px);
+    }
+}
+
+@media(max-width: 354px) {
+    .dissapearOne {
+        transform: translateY(-143px);
     }
 }
 
