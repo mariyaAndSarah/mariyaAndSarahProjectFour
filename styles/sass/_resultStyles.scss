@@ -16,8 +16,11 @@
         border-radius: 20px;
     }
     h2 {
-        font-size: 2.5rem;
-        font-weight: 600;
+        font-family: $headerFont;
+        text-transform: uppercase;
+        letter-spacing: 1.1px;
+        font-size: 2.3rem;
+        font-weight: 500;
         color: $darkColor;
     }
     a {
@@ -30,9 +33,7 @@
         }
     }
     p {
-        font-size: 1.6rem;
-        font-size: 1.3rem;
-
+        font-size: 1.45rem;
         font-weight: 400;
         margin-bottom: 20px;
         color: $darkColor;
@@ -50,7 +51,7 @@
 
     &:hover, &:focus, &:active {
         box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-        transform: scale(1.05);
+        transform: scale(1.02);
         background-color: rgba(247, 164, 182, 0.7);
     }
 }

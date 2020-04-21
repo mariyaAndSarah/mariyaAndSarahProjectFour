@@ -7,7 +7,7 @@ header {
     background-repeat: no-repeat;
     padding: 0px 20px;
     h1 {
-        font-family: 'Montserrat';
+        font-family: $headerFont;
         font-weight: 400;
         font-size: 5rem;
         text-transform: uppercase;

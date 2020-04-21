@@ -12,9 +12,16 @@
 .defaultGender,
 .defaultMap {
     height: 5vh;
-    img {
-        width: 200px;
-    }
+}
+
+.defaultMap img {
+    width: 430px;
+    transform: translateY(-115px);
+}
+
+.defaultGender img {
+    width: 165px;
+    transform: translateY(-95px);
 }
 
 .visible {

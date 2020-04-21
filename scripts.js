@@ -113,7 +113,7 @@ myElephants.clickEventAsia = () => {
     $('label.asia').on('click', function(){
         $('#firstQuestion .maps').addClass('visible');
         $('#firstQuestion .mapsOne').removeClass('visible');
-        $('#firstQuestion .defaultMap').empty();
+        $('#firstQuestion .defaultMap').css('visibility', 'hidden')
     })
 }
 
@@ -122,7 +122,7 @@ myElephants.clickEventAfrica = () => {
     $('label.africa').on('click', function () {
         $('#firstQuestion .mapsOne').addClass('visible');
         $('#firstQuestion .maps').removeClass('visible');
-        $('#firstQuestion .defaultMap').empty();
+        $('#firstQuestion .defaultMap').css('visibility', 'hidden')
     })
 }
 
@@ -133,7 +133,7 @@ myElephants.clickEventGirl = () => {
     $('label.girl').on('click', function () {
         $('#secondQuestion .girlPicture').addClass('visible');
         $('#secondQuestion .boyPicture').removeClass('visible');
-        $('#secondQuestion .defaultGender').empty();
+        $('#secondQuestion .defaultGender').css('visibility', 'hidden');
     })
 }
 
@@ -142,7 +142,7 @@ myElephants.clickEventBoy = () => {
     $('label.boy').on('click', function () {
         $('#secondQuestion .boyPicture').addClass('visible');
         $('#secondQuestion .girlPicture').removeClass('visible');
-        $('#secondQuestion .defaultGender').empty();
+        $('#secondQuestion .defaultGender').css('visibility', 'hidden');
     })
 }
 
@@ -183,7 +183,7 @@ myElephants.clickEventSubmit = () => {
                 const elephantHtml = 
                 `
                 <div class="elephant" tabindex="0">
-                    <h2> 🐘 ${elephantName}</h2>
+                    <h2>${elephantName}</h2>
                     <img src="${elephantImg}" alt="An ${elephantType} elephant named ${elephantName}">
                     <p>${elephantDob} - ${elephantDod}</p>
                     <p>${description}</p>
@@ -202,6 +202,8 @@ myElephants.clickEventReset = () => {
     $('.reset').click(function () {
         $('.results').empty();
         $('#firstQuestion .mapsOne, #firstQuestion .maps, #secondQuestion .girlPicture, #secondQuestion .boyPicture').removeClass('visible');
+        $('#firstQuestion .defaultMap').css('visibility', 'visible');
+        $('#secondQuestion .defaultGender').css('visibility', 'visible');
         myElephants.scroll('body');
     });
 }

@@ -9,8 +9,9 @@
 @media(max-width: 1170px) {
     header {
         h1{
-            width: 70%;
+            width: 90%;
             font-size: 4rem;
+            margin-top: 54px;
         }
         .byline {
             font-size: 1.5rem;
@@ -38,6 +39,31 @@
     }
 }
 
+@media(max-width: 737px) {
+    header{
+        h1 {
+            width: 100%;
+            margin-bottom: 17px;
+        }
+        .byline {
+            p:nth-child(2) {
+                padding-bottom: 27px;
+            }
+        }
+    }
+}
+
+@media(max-width: 667px) {
+    header {
+        h1{
+            font-size: 3.5rem;
+        }
+        .byline{
+            font-size: 1.3rem;
+        }
+    }
+}
+
 @media(max-width: 587px) {
     .dissapearTwo {
         transform: translateY(-80px);
@@ -46,21 +72,12 @@
     .dissapearThree {
         transform: translateY(-112px);
     }
-}
 
-@media(max-width: 560px) {
-    header{
-        h1{
-            width: 90%;
-            font-size: 3.5rem;
-        }
-        .byline {
-            font-size: 1.3rem;
-            p:nth-child(2){
-                padding-bottom: 35px;
-            }
-        }    
+    .defaultGender img {
+        width: 134px;
+        transform: translateY(-59px);
     }
+
 
     .elephant {
         width: 100%;
@@ -76,12 +93,6 @@
     }
 }
 
-@media(max-width: 354px) {
-    .dissapearOne {
-        transform: translateY(-143px);
-    }
-}
-
 @media(max-width: 490px) {
     .questionButtons {
         label {
@@ -91,22 +102,63 @@
     }
 }
 
+@media(max-width: 435px) {
+    .defaultMap img{
+        width: 307px;
+        transform: translateY(-65px);
+    }
+}
+
+@media(max-width: 419px) {
+    header {
+        background-position-x: -293px;
+    }
+}
+
 @media(max-width: 405px) {
     header{
         h1{
-            width: 100%;
             font-size: 3.2rem;
         } 
     }
 }
 
+@media(max-width: 387px) {
+    .defaultGender img {
+        width: 134px;
+        transform: translateY(-49px);
+    }
+}
+
 @media(max-width: 380px) {
+    header {
+        padding: 0px;
+        h1{
+            font-size: 3rem;
+            margin-bottom: 14px;
+        }
+        .byline {
+            padding-left: 10px;
+            padding-right: 10px;
+        
+            p:nth-child(2){
+                padding-bottom: 26px;
+            }
+        }
+    }
+    
     .questionButtons {
         label {
             margin: 6px;
             font-size: 1.6rem;
             padding: 7px 20px;
         }
+    }
+}
+
+@media(max-width: 354px) {
+    .dissapearOne {
+        transform: translateY(-143px);
     }
 }
 
