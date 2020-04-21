@@ -247,6 +247,11 @@ body {
   font-size: 1.7rem;
 }
 
+.largeWrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 .wrapper {
   width: 90%;
   max-width: 1200px;
@@ -287,13 +292,13 @@ header {
 }
 
 header h1 {
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 5rem;
   text-transform: uppercase;
   width: 70%;
   margin: 50px auto 20px;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
 }
 
 header a {
@@ -433,9 +438,16 @@ section.secondQuestion input[type="radio"]:checked + label {
   height: 5vh;
 }
 
-.defaultGender img,
 .defaultMap img {
-  width: 200px;
+  width: 430px;
+  -webkit-transform: translateY(-115px);
+          transform: translateY(-115px);
+}
+
+.defaultGender img {
+  width: 165px;
+  -webkit-transform: translateY(-95px);
+          transform: translateY(-95px);
 }
 
 .visible {
@@ -530,13 +542,11 @@ section.secondQuestion input[type="radio"]:checked + label {
 }
 
 .results h2 {
-
-  font-size: 35px;
-  font-weight: 400;
-
-  font-size: 2.5rem;
-  font-weight: 600;
-
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 2.3rem;
+  font-weight: 500;
   color: #393e41;
 }
 
@@ -552,11 +562,7 @@ section.secondQuestion input[type="radio"]:checked + label {
 }
 
 .results p {
-
-  font-size: 1.6rem;
-
-  font-size: 1.3rem;
-
+  font-size: 1.45rem;
   font-weight: 400;
   margin-bottom: 20px;
   color: #393e41;
@@ -576,8 +582,8 @@ section.secondQuestion input[type="radio"]:checked + label {
 .elephant:hover, .elephant:focus, .elephant:active {
   -webkit-box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   background-color: rgba(247, 164, 182, 0.7);
 }
 
@@ -630,8 +636,9 @@ section.secondQuestion input[type="radio"]:checked + label {
 
 @media (max-width: 1170px) {
   header h1 {
-    width: 70%;
+    width: 90%;
     font-size: 4rem;
+    margin-top: 54px;
   }
   header .byline {
     font-size: 1.5rem;
@@ -656,6 +663,25 @@ section.secondQuestion input[type="radio"]:checked + label {
   }
 }
 
+@media (max-width: 737px) {
+  header h1 {
+    width: 100%;
+    margin-bottom: 17px;
+  }
+  header .byline p:nth-child(2) {
+    padding-bottom: 27px;
+  }
+}
+
+@media (max-width: 667px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
+  header .byline {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 587px) {
   .dissapearTwo {
     -webkit-transform: translateY(-80px);
@@ -665,18 +691,10 @@ section.secondQuestion input[type="radio"]:checked + label {
     -webkit-transform: translateY(-112px);
             transform: translateY(-112px);
   }
-}
-
-@media (max-width: 560px) {
-  header h1 {
-    width: 90%;
-    font-size: 3.5rem;
-  }
-  header .byline {
-    font-size: 1.3rem;
-  }
-  header .byline p:nth-child(2) {
-    padding-bottom: 35px;
+  .defaultGender img {
+    width: 134px;
+    -webkit-transform: translateY(-59px);
+            transform: translateY(-59px);
   }
   .elephant {
     width: 100%;
@@ -694,10 +712,9 @@ section.secondQuestion input[type="radio"]:checked + label {
   }
 }
 
-@media (max-width: 354px) {
-  .dissapearOne {
-    -webkit-transform: translateY(-143px);
-            transform: translateY(-143px);
+@media (max-width: 525px) {
+  header h1 {
+    margin-top: 35px;
   }
 }
 
@@ -708,17 +725,59 @@ section.secondQuestion input[type="radio"]:checked + label {
   }
 }
 
+@media (max-width: 435px) {
+  .defaultMap img {
+    width: 307px;
+    -webkit-transform: translateY(-65px);
+            transform: translateY(-65px);
+  }
+}
+
+@media (max-width: 419px) {
+  header {
+    background-position-x: -293px;
+  }
+}
+
 @media (max-width: 405px) {
   header h1 {
-    width: 100%;
     font-size: 3.2rem;
   }
 }
 
+@media (max-width: 387px) {
+  .defaultGender img {
+    width: 134px;
+    -webkit-transform: translateY(-49px);
+            transform: translateY(-49px);
+  }
+}
+
 @media (max-width: 380px) {
+  header {
+    padding: 0px;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 14px;
+  }
+  header .byline {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  header .byline p:nth-child(2) {
+    padding-bottom: 26px;
+  }
   .questionButtons label {
     margin: 6px;
     font-size: 1.6rem;
     padding: 7px 20px;
+  }
+}
+
+@media (max-width: 354px) {
+  .dissapearOne {
+    -webkit-transform: translateY(-143px);
+            transform: translateY(-143px);
   }
 }

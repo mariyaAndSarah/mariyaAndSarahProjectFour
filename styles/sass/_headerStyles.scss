@@ -7,13 +7,13 @@ header {
     background-repeat: no-repeat;
     padding: 0px 20px;
     h1 {
-        font-family: 'Montserrat';
+        font-family: $headerFont;
         font-weight: 400;
         font-size: 5rem;
         text-transform: uppercase;
         width: 70%;
         margin: 50px auto 20px;
-        letter-spacing: 1.3px;
+        letter-spacing: 1.1px;
     }
     // The styling for the start link in the header. 
     a {
