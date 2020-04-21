@@ -62,7 +62,7 @@ app.scroll = function (scrollTo) {
 
 // Use the scroll function so that when the start link on the landing page is clicked, the page scrolls from the landing page to the first question of the quiz. This function will be called in the init function. 
 app.clickEventStart = () => {
-    $('header a').on('click', function (e) {
+    app.$header.on('click', function (e) {
         e.preventDefault();
         app.scroll('.firstQuestion');
     })
@@ -70,7 +70,7 @@ app.clickEventStart = () => {
 
 // Use the scroll function again so that when the 'Next Question' link underneath the first question is clicked, the page scrolls from the first question of the quiz to the second. This function will be called in the init function. 
 app.clickEventQuestionOne = () => {
-    $('a.first').on('click', function (e) {
+    app.$firstLink.on('click', function (e) {
         e.preventDefault();
         app.scroll('.secondQuestion');
     })
@@ -87,17 +87,17 @@ app.clickFunction = (label, clickedPic, removedPic, defaultPic) => {
 
 // Define a function that will contain the event listener for the submit button. This function will be called in the init function. 
 app.clickEventSubmit = () => {
-    $('form').on('submit', function(e) {
+    app.$form.on('submit', function(e) {
         e.preventDefault();
 
         // On submit, the page will scroll to the 'results' section of the app. 
-        app.scroll('.results');
+        app.scroll(app.$results);
 
         // In addition, the 'results' section of the app will be emptied every click of the submit button. 
-        $('.results').empty();
+        $(app.$results).empty();
 
         // On submit, play the audio file of an elephant.
-        $('audio#pop')[0].play()
+        app.$audio[0].play()
     
         // Declare two variables that will store the user input for each of the two questions.
         const species = $('input[class="species"]:checked').val();
@@ -139,8 +139,8 @@ app.clickEventSubmit = () => {
 
 // Define a function that will contain the event listener for the reset button. In this event listener, on reset, the 'results' section is emptied, the radio buttons are un-checked, and the app is scrolled back to the landing page.  
 app.clickEventReset = () => {
-    $('.reset').click(function () {
-        $('.results').empty();
+    app.$reset.click(function () {
+        app.$results.empty();
         $('.mapsOne, .maps, .girlPicture, .boyPicture').removeClass('visible');
         $('.defaultMap').css('visibility', 'visible');
         $('.defaultGender').css('visibility', 'visible');
