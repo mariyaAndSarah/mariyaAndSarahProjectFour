@@ -12,17 +12,4 @@ $backgroundOne: #5F7AA5;
 $backgroundThree: #F7A4B6;
 $tertiaryColor: #8bb174;
 
-@mixin fade {
-    @keyframes fadeIn {
-        0% {
-            opacity:0;
-        }
-        50% {
-            opacity:0.4;
-        }
-        100% {
-            opacity:0.7;
-        }
-    }
-}
 

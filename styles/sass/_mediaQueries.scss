@@ -23,14 +23,6 @@
     .elephant {
         width: 47%;
     }
-
-    .elephant:nth-of-type(3n) {
-        margin-right: 20px;
-    }
-
-    .elephant:nth-of-type(2n) {
-        margin-right: 0;
-    }
 }
 
 @media(max-width: 737px) {
@@ -75,6 +67,7 @@
     .elephant {
         width: 100%;
     }
+    
 }
 
 @media(max-width: 537px){

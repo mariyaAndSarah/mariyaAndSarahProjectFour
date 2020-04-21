@@ -1,6 +1,27 @@
 // // Create an empty object that will be holding all of the code for the application. This object will be the namespace for the application.
 const app = {};
 
+// Caching jquery selectors
+app.$header = $('header a')
+app.$firstLink = $('a.first')
+app.$form = $('form')
+app.$results = $('.results')
+app.$audio = $('audio#pop')
+app.$species = $('input[class="species"]:checked')
+app.$sex = $('input[class="sex"]:checked')
+app.$reset = $('.reset')
+app.$asia = $('label.asia') 
+app.$africa = $('label.africa')
+app.$maps = $('.maps') 
+app.$mapsOne = $('.mapsOne') 
+app.$defaultMap = $('.defaultMap')
+app.$girl = $('label.girl')
+app.$boy = $('label.boy')
+app.$girlImg = $('.girlPicture') 
+app.$boyImg = $('.boyPicture')
+app.$defaultGender = $('.defaultGender');
+
+
 // Define a function that will make the ajax request. This function will be called inside of the init function. 
 app.getElephants = () => {
     $.ajax({
@@ -14,6 +35,7 @@ app.getElephants = () => {
         app.displayElephants(result);
     });
 };
+
 
 // Filter the results so that all of the elephants that are displayed have names as well as functioning images. 
 app.displayElephants = (data) => {
@@ -75,7 +97,7 @@ app.clickEventSubmit = () => {
         $('.results').empty();
 
         // On submit, play the audio file of an elephant.
-        // $('audio#pop')[0].play()
+        $('audio#pop')[0].play()
     
         // Declare two variables that will store the user input for each of the two questions.
         const species = $('input[class="species"]:checked').val();
@@ -119,9 +141,9 @@ app.clickEventSubmit = () => {
 app.clickEventReset = () => {
     $('.reset').click(function () {
         $('.results').empty();
-        $('#firstQuestion .mapsOne, #firstQuestion .maps, #secondQuestion .girlPicture, #secondQuestion .boyPicture').removeClass('visible');
-        $('#firstQuestion .defaultMap').css('visibility', 'visible');
-        $('#secondQuestion .defaultGender').css('visibility', 'visible');
+        $('.mapsOne, .maps, .girlPicture, .boyPicture').removeClass('visible');
+        $('.defaultMap').css('visibility', 'visible');
+        $('.defaultGender').css('visibility', 'visible');
         app.scroll('body');
     });
 }
@@ -133,7 +155,7 @@ app.init = () => {
     app.clickFunction('label.asia', '.maps', '.mapsOne', '.defaultMap')
     app.clickFunction('label.africa', '.mapsOne', '.maps', '.defaultMap')
     app.clickFunction('label.girl', '.girlPicture', '.boyPicture', '.defaultGender');
-    app.clickFunction('label.boy', '.boyPicture', '.girlPicture', 'defaultGender')
+    app.clickFunction('label.boy', '.boyPicture', '.girlPicture', '.defaultGender')
     app.clickEventQuestionOne();
     app.clickEventSubmit();
     app.clickEventReset();
@@ -144,11 +166,4 @@ $(function(){
     app.init();
 });
 
-// app.$classname = $('.classname');
-
-// myFunction = () => {
-//    parameter.on('click', function(){
-//         // logic
-//     })
-// }
 
