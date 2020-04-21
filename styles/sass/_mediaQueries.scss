@@ -37,6 +37,9 @@
             }
         }
     }
+    .elephant {
+        width: 75%;
+    }
 }
 
 @media(max-width: 667px) {
@@ -70,12 +73,12 @@
     
 }
 
-@media(max-width: 537px){
+@media(max-width: 550px){
     .dissapear {
-        transform: translateY(-107px);
+        transform: translateY(-155px);
     }
     .dissapearOne{
-        transform: translateY(-152px);
+        transform: translateY(-199px);
     }
 }
 
@@ -151,8 +154,11 @@
 }
 
 @media(max-width: 354px) {
+    .disapper {
+        transform: translateY(-130px);
+    }
     .dissapearOne {
-        transform: translateY(-143px);
+        transform: translateY(-185px);
     }
 }
 

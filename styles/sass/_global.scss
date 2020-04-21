@@ -11,15 +11,17 @@ body {
 }
 
 // A large wrapper to contain the content of the page on a large display.
+.largeWrapper, .wrapper, h2, p {
+    margin: 0 auto;
+}
+
 .largeWrapper {
     max-width: 1800px;
-    margin: 0 auto;
 }
 
 .wrapper {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 header,

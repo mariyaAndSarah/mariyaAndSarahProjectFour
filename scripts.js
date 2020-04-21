@@ -1,7 +1,7 @@
-// // Create an empty object that will be holding all of the code for the application. This object will be the namespace for the application.
+// Create an empty object that will be holding all of the code for the application. This object will be the namespace for the application.
 const app = {};
 
-// Caching jquery selectors
+// Cache Jquery selectors
 app.$header = $('header a')
 app.$firstLink = $('a.first')
 app.$form = $('form')
@@ -20,7 +20,7 @@ app.$boyImg = $('.boyPicture')
 app.$defaultGender = $('.defaultGender');
 
 
-// Define a function that will make the ajax request. This function will be called inside of the init function. 
+// Define a function that will make the Ajax request. This function will be called inside of the init function. 
 app.getElephants = () => {
     $.ajax({
         url: 'http://proxy.hackeryou.com',
@@ -34,8 +34,7 @@ app.getElephants = () => {
     });
 };
 
-
-// Filter the results so that all of the elephants that are displayed have names as well as functioning images. 
+// Filter the results so that all of the elephants that are displayed have names as well as functioning images. Elephants without names in the API did not have any other data included. 
 app.displayElephants = (data) => {
     app.filteredArrayOne = data.filter((filterName) => {
         const name = filterName.name;
@@ -91,10 +90,10 @@ app.clickEventSubmit = () => {
         // On submit, the page will scroll to the 'results' section of the app. 
         app.scroll(app.$results);
 
-        // In addition, the 'results' section of the app will be emptied every click of the submit button. 
+        // In addition, the 'results' section of the app will be emptied with every click of the submit button. 
         $(app.$results).empty();
 
-        // On submit, play the audio file of an elephant.
+        // On submit, play the audio file of an elephant. You are welcome.
         app.$audio[0].play()
     
         // Declare two variables that will store the user input for each of the two questions.
@@ -146,7 +145,7 @@ app.clickEventReset = () => {
     });
 }
 
-// Define the init function for the app and inside of it, call the functions from throughout the app. 
+// Define the init function for the app and inside of it, call the functions from the app namespace. 
 app.init = () => {
     app.getElephants();
     app.clickEventStart();
@@ -159,7 +158,7 @@ app.init = () => {
     app.clickEventReset();
 };
 
-// Define a document ready function for the app and inside of it, call the init function. 
+// Define a document ready function for the app and call the init function. 
 $(function(){
     app.init();
 });

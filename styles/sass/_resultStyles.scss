@@ -18,8 +18,8 @@
     h2 {
         font-family: $headerFont;
         text-transform: uppercase;
-        letter-spacing: 1.1px;
-        font-size: 2.3rem;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
         font-weight: 500;
         color: $darkColor;
     }
@@ -29,7 +29,7 @@
         color: $lightColor;
         background-color: $darkColor;
         &:hover, &:focus, &:active {
-            background-color: #272a2b;
+            background-color: $darkestHover;
         }
     }
     p {
@@ -55,9 +55,4 @@
         transform: scale(1.02);
         background-color: rgba(247, 164, 182, 0.7);
     }
-}
-
-.elephant:nth-of-type(3n),
-.elephant:last-of-type {
-    margin-right: 0;
 }

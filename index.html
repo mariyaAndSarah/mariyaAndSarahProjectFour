@@ -27,9 +27,11 @@
             <a href="#firstQuestion" class="start">Start</a>
         </div>
     </header>
-    <main id="startQuiz" class="">
+    <!-- Quiz starts -->
+    <main id="startQuiz">
         <form action="#" method="#" class="myForm" name="myForm">
             <section class="firstQuestion" id="firstQuestion">
+                <!-- Images above the question, modified with JS -->
                 <div id="dMap" class="defaultMap">
                     <img src="./assets/world-map.png" alt="default map">
                 </div>
@@ -45,17 +47,18 @@
                     <div class="questionButtons">
                         <!-- Option one -->
                         <input type="radio" name="species" value="Asian" id="Asian" autocomplete="off" class="species">
-                        <label for="Asian" class="triggerOne asia">Asian</label>
+                        <label for="Asian" class="asia">Asian</label>
                        <!-- Option two -->
                         <input type="radio" name="species" value="African" id="African" autocomplete="off" class="species">
-                        <label for="African" class="triggerTwo africa">African</label>
+                        <label for="African" class="africa">African</label>
                     </div>
                 </fieldset>
                 <a href="#secondQuestion" class="first">Next Question</a>
             </section>
             <section class="secondQuestion" id="secondQuestion">
+                <!-- Images above the question, modified with JS -->
                 <div id="dGender" class="defaultGender">
-                    <img src="./assets/leafTwo.png" alt="default gender">
+                    <img src="./assets/leafTwo.png" alt="Default gender image placeholder">
                 </div>
                 <div class="girlPicture">
                     <img src="./assets/graphicEl1.png" alt="A girl elephant" class="dissapearTwo">
@@ -69,16 +72,18 @@
                     <div class="questionButtons">
                         <!-- Option one -->
                         <input type="radio" name="sex" value="female" id="girl" autocomplete="off" class="sex">
-                        <label for="girl" class="triggerThree girl">Girl</label>
+                        <label for="girl" class="girl">Girl</label>
                         <!-- Option two -->
                         <input type="radio" name="sex" value="male" id="boy" autocomplete="off" class="sex">
-                        <label for="boy" class="triggerFour boy">Boy</label>
+                        <label for="boy" class="boy">Boy</label>
                     </div>
                 </fieldset>
+                <!-- Submit button -->
                 <div class="buttons">
                     <input class="submit" type="submit" value="Start my Safari" id="submit"/>
                 </div>
             </section>
+            <!-- Show API results based on quiz answers -->
             <div class="resultsBackground">
                 <section class="results wrapper" id="results"></section>
                 <div class="buttons">
@@ -88,7 +93,6 @@
         </form>
     </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="scripts.js"></script>
 </body>
 </html>

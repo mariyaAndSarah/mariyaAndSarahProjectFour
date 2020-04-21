@@ -15,9 +15,8 @@
     background-color: $accentColorLight;
     font-family: $bodyFont;
     font-weight: 300;
-    &:hover,
-    &:focus {
-        background-color: #8c6156;
+    &:hover, &:focus {
+        background-color: $lightHoverColor;
         cursor: pointer;
     }
 }
@@ -27,7 +26,6 @@
 }
 
 .reset {
-    margin-top: 70px;
-    margin-bottom: 30px;
+    margin: 70px 0 30px 0;
 }
 
