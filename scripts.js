@@ -20,7 +20,6 @@ myElephants.displayElephants = (data) => {
     myElephants.filteredArrayOne = data.filter((filterName) => {
         const name = filterName.name;
         return name;
-
     });
     myElephants.filteredArray = myElephants.filteredArrayOne.filter((filterImage) => {
         const url = filterImage.image;
@@ -157,6 +156,7 @@ myElephants.clickEventSubmit = () => {
         // In addition, the 'results' section of the app will be emptied every click of the submit button. 
         $('.results').empty();
 
+        // On submit, play the audio file of an elephant.
         // $('audio#pop')[0].play()
     
         // Declare two variables that will store the user input for each of the two questions.
@@ -167,7 +167,7 @@ myElephants.clickEventSubmit = () => {
         for (let i = 0; i < myElephants.filteredArray.length; i++) {
             const store = myElephants.filteredArray[i].species;
             const gender = myElephants.filteredArray[i].sex;
-
+        
             if (store.includes(species) && gender.toLowerCase() === sex) {
 
                 // Declare variables that will be used when appending the API results to the page. 
