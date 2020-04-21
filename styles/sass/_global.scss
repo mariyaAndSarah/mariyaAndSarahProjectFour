@@ -10,6 +10,11 @@ body {
     font-size: 1.7rem;
 }
 
+// A large wrapper to contain the content of the page on a large display.
+.largeWrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+}
 
 .wrapper {
     width: 90%;

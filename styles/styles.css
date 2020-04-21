@@ -247,6 +247,11 @@ body {
   font-size: 1.7rem;
 }
 
+.largeWrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
 .wrapper {
   width: 90%;
   max-width: 1200px;
@@ -293,7 +298,7 @@ header h1 {
   text-transform: uppercase;
   width: 70%;
   margin: 50px auto 20px;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
 }
 
 header a {
@@ -704,6 +709,12 @@ section.secondQuestion input[type="radio"]:checked + label {
   .dissapearOne {
     -webkit-transform: translateY(-152px);
             transform: translateY(-152px);
+  }
+}
+
+@media (max-width: 525px) {
+  header h1 {
+    margin-top: 35px;
   }
 }
 
