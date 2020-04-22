@@ -67,7 +67,7 @@ app.clickFunction = (label, clickedPic, removedPic, defaultPic) => {
     $(label).on('click', function(){
         $(clickedPic).addClass('visible')
         $(removedPic).removeClass('visible')
-        $(defaultPic).css('visibility', 'hidden')
+        $(defaultPic).css('display', 'none')
     })
 }
 
@@ -128,8 +128,8 @@ app.clickEventReset = () => {
     app.$reset.click(function () {
         app.$results.empty();
         $('.mapsOne, .maps, .boyPicture, .girlPicture').removeClass('visible');
-        $('.defaultMap').css('visibility', 'visible');
-        $('.defaultGender').css('visibility', 'visible');
+        $('.defaultMap').css('display', 'inline-block');
+        $('.defaultGender').css('display', 'inline-block');
         app.scroll('body');
     });
 }

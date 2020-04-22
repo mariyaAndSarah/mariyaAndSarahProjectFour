@@ -1,44 +1,50 @@
 // Styling for images that appear above the questions
 
 .maps, .mapsOne, .girlPicture, .boyPicture {
-    visibility: hidden;
+    display: none;
     height: 5vh;
     img {
         width: 200px;
     }
 }
 
-.defaultGender,
+.mapsOne img {
+    width: 170px;
+}
+
 .defaultMap {
     height: 5vh;
+    img {
+        width: 430px;
+        transform: translateY(-168px);
+    }
 }
 
-.defaultMap img {
-    width: 430px;
-    transform: translateY(-115px);
-}
-
-.defaultGender img {
-    width: 165px;
-    transform: translateY(-95px);
+.defaultGender {
+    height: 5vh;
+    img{
+        width: 165px;
+        transform: translateY(-146px);
+    }
 }
 
 .visible {
-    visibility: visible;
+    display: inline-block;
 }
 
 .dissapear {
-    transform: translateY(-128px)
+    transform: translateY(-150px)
 }
 
 .dissapearOne {
-    transform: translateY(-170px)
+    width: 170px;
+    transform: translateY(-145px)
 }
 
 .dissapearTwo {
-    transform: translateY(-98px)
+    transform: translateY(-122px)
 }
 
 .dissapearThree {
-    transform: translateY(-135px)
+    transform: translateY(-120px)
 }

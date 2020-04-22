@@ -51,35 +51,19 @@
             font-size: 1.3rem;
         }
     }
+
+    .defaultGender img {
+        transform: translateY(-132px);
+    }
 }
 
 @media(max-width: 587px) {
-    .dissapearTwo {
-        transform: translateY(-95px);
-    }
-    
-    .dissapearThree {
-        transform: translateY(-135px);
-    }
-
-    .defaultGender img {
-        width: 134px;
-        transform: translateY(-87px);
-    }
-
     .elephant {
         width: 100%;
     }
-    
 }
 
 @media(max-width: 550px){
-    .dissapear {
-        transform: translateY(-125px);
-    }
-    .dissapearOne{
-        transform: translateY(-167px);
-    }
     header {
         background-position: left;
         background-position-x: -385px;
@@ -101,16 +85,25 @@
             font-size: 1.6rem;
         }
     }
-    .defaultGender img {
-        width: 134px;
-        transform: translateY(-74px);
-    }
 }
 
 @media(max-width: 435px) {
     .defaultMap img{
         width: 307px;
-        transform: translateY(-84px);
+        transform: translateY(-134px);
+    }
+
+    .defaultGender img {
+        width: 134px;
+        transform: translateY(-112px);
+    }
+
+    .dissapearTwo {
+        transform: translateY(-121px);
+    }
+
+    .dissapearThree {
+        transform: translateY(-120px);
     }
 }
 
@@ -128,10 +121,17 @@
     }
 }
 
-@media(max-width: 387px) {
+@media(max-width: 390px) {
+    .dissapearTwo {
+        transform: translateY(-92px);
+    }
+
+    .dissapearThree {
+        transform: translateY(-92px);
+    }
+    
     .defaultGender img {
-        width: 134px;
-        transform: translateY(-70px);
+        transform: translateY(-94px);
     }
 }
 
@@ -161,17 +161,32 @@
     }
 }
 
-@media(max-width: 354px) {
-    .disapper {
-        transform: translateY(-130px);
+@media(max-width: 375px) {
+    .defaultMap img {
+        transform: translateY(-116px);
     }
+
+    .dissapear {
+        transform: translateY(-114px);
+    }
+
+    .mapsOne img {
+        width: 160px;
+    }
+
+    .maps img {
+        width: 178px;
+    }
+
     .dissapearOne {
-        transform: translateY(-148px);
+        transform: translateY(-115px)
     }
 }
 
-@media(max-width: 335px) {
-    .defaultGender img {
-        transform: translateY(-47px);
-    }
+
+
+@media(max-width: 355px) {
+    
 }
+
+
