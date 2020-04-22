@@ -8,17 +8,6 @@ app.$form = $('form')
 app.$results = $('.results')
 app.$audio = $('audio#pop')
 app.$reset = $('.reset')
-app.$asia = $('label.asia') 
-app.$africa = $('label.africa')
-app.$maps = $('.maps') 
-app.$mapsOne = $('.mapsOne') 
-app.$defaultMap = $('.defaultMap')
-app.$girl = $('label.girl')
-app.$boy = $('label.boy')
-app.$girlImg = $('.girlPicture') 
-app.$boyImg = $('.boyPicture')
-app.$defaultGender = $('.defaultGender');
-
 
 // Define a function that will make the Ajax request. This function will be called inside of the init function. 
 app.getElephants = () => {
@@ -138,9 +127,9 @@ app.clickEventSubmit = () => {
 app.clickEventReset = () => {
     app.$reset.click(function () {
         app.$results.empty();
-        (app.$mapsOne, app.$maps, app.$girlImg, app.$boyImg).removeClass('visible');
-        app.$defaultMap.css('visibility', 'visible');
-        app.$defaultGender.css('visibility', 'visible');
+        $('.mapsOne, .maps, .boyPicture, .girlPicture').removeClass('visible');
+        $('.defaultMap').css('visibility', 'visible');
+        $('.defaultGender').css('visibility', 'visible');
         app.scroll('body');
     });
 }
@@ -149,10 +138,10 @@ app.clickEventReset = () => {
 app.init = () => {
     app.getElephants();
     app.clickEventStart();
-    app.clickFunction(app.$asia, app.$maps, app.$mapsOne, app.$defaultMap)
-    app.clickFunction(app.$africa, app.$mapsOne, app.$maps, app.$defaultMap)
-    app.clickFunction(app.$girl, app.$girlImg, app.$boyImg, app.$defaultGender);
-    app.clickFunction(app.$boy, app.$boyImg, app.$girlImg, app.$defaultGender)
+    app.clickFunction('label.asia', '.maps', '.mapsOne', '.defaultMap')
+    app.clickFunction('label.africa', '.mapsOne', '.maps', '.defaultMap')
+    app.clickFunction('label.girl', '.girlPicture', '.boyPicture', '.defaultGender');
+    app.clickFunction('label.boy', '.boyPicture', '.girlPicture', '.defaultGender')
     app.clickEventQuestionOne();
     app.clickEventSubmit();
     app.clickEventReset();

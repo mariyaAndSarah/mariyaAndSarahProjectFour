@@ -247,7 +247,7 @@ body {
   font-size: 1.7rem;
 }
 
-.largeWrapper, .wrapper, h2, p {
+.largeWrapper, .wrapper, p {
   margin: 0 auto;
 }
 
@@ -358,6 +358,7 @@ section.secondQuestion h2 {
   font-weight: 400;
   color: #d8e2dc;
   width: 70%;
+  margin: 25px auto;
 }
 
 fieldset {
@@ -628,17 +629,17 @@ section.secondQuestion input[type="radio"]:focus + label, section.secondQuestion
 
 @media (max-width: 587px) {
   .dissapearTwo {
-    -webkit-transform: translateY(-80px);
-            transform: translateY(-80px);
+    -webkit-transform: translateY(-95px);
+            transform: translateY(-95px);
   }
   .dissapearThree {
-    -webkit-transform: translateY(-112px);
-            transform: translateY(-112px);
+    -webkit-transform: translateY(-135px);
+            transform: translateY(-135px);
   }
   .defaultGender img {
     width: 134px;
-    -webkit-transform: translateY(-59px);
-            transform: translateY(-59px);
+    -webkit-transform: translateY(-87px);
+            transform: translateY(-87px);
   }
   .elephant {
     width: 100%;
@@ -647,12 +648,16 @@ section.secondQuestion input[type="radio"]:focus + label, section.secondQuestion
 
 @media (max-width: 550px) {
   .dissapear {
-    -webkit-transform: translateY(-155px);
-            transform: translateY(-155px);
+    -webkit-transform: translateY(-125px);
+            transform: translateY(-125px);
   }
   .dissapearOne {
-    -webkit-transform: translateY(-199px);
-            transform: translateY(-199px);
+    -webkit-transform: translateY(-167px);
+            transform: translateY(-167px);
+  }
+  header {
+    background-position: left;
+    background-position-x: -385px;
   }
 }
 
@@ -667,13 +672,18 @@ section.secondQuestion input[type="radio"]:focus + label, section.secondQuestion
     margin: 20px;
     font-size: 1.6rem;
   }
+  .defaultGender img {
+    width: 134px;
+    -webkit-transform: translateY(-74px);
+            transform: translateY(-74px);
+  }
 }
 
 @media (max-width: 435px) {
   .defaultMap img {
     width: 307px;
-    -webkit-transform: translateY(-65px);
-            transform: translateY(-65px);
+    -webkit-transform: translateY(-84px);
+            transform: translateY(-84px);
   }
 }
 
@@ -692,8 +702,8 @@ section.secondQuestion input[type="radio"]:focus + label, section.secondQuestion
 @media (max-width: 387px) {
   .defaultGender img {
     width: 134px;
-    -webkit-transform: translateY(-49px);
-            transform: translateY(-49px);
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
   }
 }
 
@@ -725,7 +735,14 @@ section.secondQuestion input[type="radio"]:focus + label, section.secondQuestion
             transform: translateY(-130px);
   }
   .dissapearOne {
-    -webkit-transform: translateY(-185px);
-            transform: translateY(-185px);
+    -webkit-transform: translateY(-148px);
+            transform: translateY(-148px);
+  }
+}
+
+@media (max-width: 335px) {
+  .defaultGender img {
+    -webkit-transform: translateY(-47px);
+            transform: translateY(-47px);
   }
 }
