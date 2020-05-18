@@ -12,11 +12,11 @@ app.$reset = $('.reset')
 // Define a function that will make the Ajax request. This function will be called inside of the init function. 
 app.getElephants = () => {
     $.ajax({
-        url: 'http://proxy.hackeryou.com',
+        url: 'https://proxy.hackeryou.com',
         dataType: 'json',
         method: 'GET',
         data: {
-            reqUrl: 'http://elephant-api.herokuapp.com/elephants',
+            reqUrl: 'https://elephant-api.herokuapp.com/elephants',
         }
     }).then((result) => {
         app.displayElephants(result);
